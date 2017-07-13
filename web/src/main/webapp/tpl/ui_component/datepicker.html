@@ -1,0 +1,26 @@
+<div ng-controller="DatepickerCtrl">
+
+    <div class="row">
+     	<pre>  Selected date is : from [<em>{{dt_from | date:'fullDate' }}</em>] to [<em>{{dt_to | date:'fullDate' }}</em>]</pre>
+
+        <div class="col-md-2">
+            <p class="input-group">
+			  <span> From </span>            
+              <input type="text" class="form-control" datepicker-popup="{{format}}" 
+              ng-model="dt_from" is-open="status.from_opened" min-date="minDate" max-date="maxDate" 
+              datepicker-options="dateOptions" date-disabled="disabled(date, mode)" 
+              ng-required="true" close-text="Close" ng-click="open_from($event)"/>
+            </p>
+        </div>
+
+      	<div class="col-md-2">
+            <p class="input-group">
+        	  <span> To </span>            
+              <input type="text" class="form-control" datepicker-popup="{{format}}" 
+              ng-model="dt_to" is-open="status.to_opened" min-date="minDate" max-date="maxDate" 
+              datepicker-options="dateOptions" date-disabled="disabled(date, mode)" 
+              ng-required="true" close-text="Close" ng-click="open_to($event)"/>
+            </p>
+        </div>
+    </div>
+</div>

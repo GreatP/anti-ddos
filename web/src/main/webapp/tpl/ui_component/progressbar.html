@@ -1,0 +1,7 @@
+<div ng-controller="ProgressDemoCtrl">
+    <h3>Progress Bar <button type="button" class="btn btn-sm btn-primary" ng-click="random()">Randomize</button></h3>
+	<small><em>total</em></small>    
+    <progressbar max="max" value="dynamic"><span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span></progressbar>
+    <small><em>progress</em></small>
+    <progressbar animate="true" value="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+</div>

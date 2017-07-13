@@ -1,0 +1,26 @@
+
+<config>
+	<content>
+		<logo src="img/logo.png" />
+		<lightbox delay="5000">
+			<!-- 广告图片大小:144px*260px -->
+			<area rel=".gg-photo .no1 .cards" timeout="600">
+				<item src="img/client_service.jpg" text="技术服务热线" />
+			</area>
+			<!-- 广告图片大小:260px*128px -->
+			<area rel=".gg-photo .no2 .cards" timeout="600">
+				<item src="img/support_service.jpg" text="中电科技术服务社区" />
+			</area>
+			<!-- 广告图片大小:260px*128px -->
+			<area rel=".gg-photo .no3 .cards" timeout="600">
+				<item src="img/product.jpg" text="感谢使用中电科产品" />
+			</area>
+		</lightbox>
+		<call visible="true" rel=".gg-box .call">
+<![CDATA[ 售后服务：400-888-8888 ]]>
+		</call>
+		<loading>
+<![CDATA[ 加载中… ]]>
+		</loading>
+	</content>
+</config>

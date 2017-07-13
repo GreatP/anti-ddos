@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3">
+        </div>
+        <div class="text-danger">
+            <div ng-show="saveErrShow" translate="commonword.SAVE_FAIL">保存网络节点配置失败</div>
+            <div ng-show="getErrShow" translate="commonword.GET_FAIL">获取网络节点配置失败</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="netnode.NAME">交换机名称：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="name" name="name" maxlength="64" ng-model="netnodeformData.name" class="form-control"  ng-blur = "blurCheckName()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnNameShow"><span translate="netnode.NAME_EMPTY">名称不能为空</span></div>
+            <div ng-show="warnSameShow"><span translate="netnode.NAME_EXIST">该交换机信息已存在</span></div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="netnode.ID">交换机ID：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="swId" name="swId"  maxlength="64" ng-model="netnodeformData.swId" class="form-control" ng-blur = "blurCheckSwId()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnSwIdShow"><span translate="netnode.ID_EMPTY">交换机Id不能为空</span></div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="netnode.CONTROLLER_ID">控制器ID：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <select id="selectController" ng-model="netnodeformData.controllerId" class="form-control">
+                <option id="controllerId"  ng-repeat="obj in ControllerJson" value={{obj.id}}>{{obj.ip}}:{{obj.port}}</option>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnControllerShow"><span translate="netnode.CONTROLLER_ID_EMPTY">控制器不能为空</span></div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-3 col-md-6 col-sm-6">
+            <input type="hidden" name="id" value="{{id}}" />
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="save()" translate="commonword.SAVE">保存</button>
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="goBack()" translate="commonword.BACK">返回</button>
+        </div>
+    </div>
+</div>

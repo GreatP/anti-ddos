@@ -1,0 +1,113 @@
+
+
+<div class="container-fluid">
+    <div class="row-fluid m-l-md m-b-md">
+        <form>
+            <br>
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <select id="selectPo" class="form-control" ng-model="po">
+                    <option value="" translate="flowDisplay.SELECT_PO">---请选择保护对象---</option>
+                    <option ng-repeat="obj in POData" value={{obj}}>{{obj.name}}</option>
+                </select>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-3 col-sm-3">
+
+                <select id="selectTime" class="form-control">
+                    <option value=-1 translate="flowDisplay.SELECT_TIME">---请选择流量显示时间段---</option>
+                    <option ng-repeat="obj in showtime" value={{obj.value}}>{{obj.name}}</option>
+                </select>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <!--<button id="year" type="button"  ng-click="DrawEChart(5)">提交查询</button>-->
+                <button type="button" class="btn btn-info" ng-click="getDatas()" translate="flowDisplay.QUERY">提交查询</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br>
+
+
+<div class="row-fluid">
+
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading font-bold" translate="flowDisplay.DISPLAYSHOW">流量展示图</div>
+            <div class="panel-body">
+                <div data-iu-chart="hourOption"  style="height:426px;"></div>
+                <div>
+                    <table class="table table-hover " >
+                        <thead>
+                        <tr>
+                        <th translate="flowDisplay.INPUT">入流量</th>
+                        <th translate="flowDisplay.OUTPUT">出流量</th>
+                        <th translate="flowDisplay.ATTACK">攻击流量</th>
+                        <th translate="flowDisplay.FLOWTIME">时间</th>
+                        </tr>
+                        </thead>
+                        <tbody ng-show="dataLength>0">
+            			<tr ng-repeat="obj in tableShow">
+                		<td data-toggle="tooltip" title="{{obj.bps_all}}">{{obj.bps_all}}</td>
+                		<td data-toggle="tooltip" title='{{ obj.output_bps}}'>{{ obj.output_bps}}</td>
+                		<td data-toggle="tooltip" title="{{obj.attack_bps}}">{{obj.attack_bps}}</td>
+                		<td data-toggle="tooltip" title="{{ obj.time | date:"yyyy-MM-dd HH:mm:ss"}}">{{ obj.time | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                        </tr>
+                        </tbody>
+
+                   </table>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+
+            <div class="panel-heading font-bold" translate="flowDisplay.RROTOCOL_DIST">协议分布图</div>
+            <div class="panel-body">
+                <div data-iu-chart="protocalPieOption" style="height:426px;"></div>
+                <div>
+                    <table class="table table-hover " >
+                        <thead>
+                        <tr>                        
+                        <th translate="flowDisplay.RROTOCOL">协议</th>
+                        <th translate="flowDisplay.RATE">速率</th>
+                        <th translate="flowDisplay.PERCENT">百分比</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+            			<tr ng-repeat="obj in protoData">                		
+                		<td data-toggle="tooltip" title="{{obj.proto}}">{{obj.proto}}</td>
+                		<td data-toggle="tooltip" title='{{ obj.value}}'>{{ obj.value}}</td>
+                		<td data-toggle="tooltip" title="{{obj.prent}}">{{obj.prent}}</td>
+                        </tr>
+                        </tbody>
+
+                   </table>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    //$(function(){
+    function initPage() {
+        var wHeight = $(window).height();
+        var cHeight =( wHeight-170)/2;
+        if(cHeight > 0) {
+            $(".iuChart").height(cHeight);
+        }
+    }
+
+    initPage();
+    $(window).resize(function () {
+        initPage()
+    });
+    //});
+</script>
+

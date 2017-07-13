@@ -1,0 +1,114 @@
+<div class="col" ng-controller="attackViewController" >
+    <div class="wrapper-md">
+        <div class="row-fluid text-center">
+
+            <div class="col-lg-3 col-sm-3">
+                <div class="panel bg-danger padder-v item">
+                    <div class="h1 text-white h1 m-b-sm" ng-model="attackNumber" num-move="-" style="height: 39px">{{attackNumber|number}}</div>
+                    <span class="text-white" translate="attackView.ATTACK_NUM">攻击次数</span>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-3">
+                <div class="panel bg-info padder-v item">
+                    <div class="h1 text-white h1 m-b-sm" ng-model="defenseNumber" num-move="-" style="height: 39px">{{defenseNumber|number}}</div>
+                    <span class="text-white" translate="attackView.DEFENSE_NUM">启动防御次数</span>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-3">
+                <div class="panel bg-primary padder-v item">
+                    <div class="h1 text-white h1 m-b-sm" ng-model="cleanTraffic" num-move="-" style="height: 39px">{{cleanTraffic}}</div>
+                    <span class="text-white" translate="attackView.CLEAN_TRAFFIC">清洗流量</span>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-3">
+                <div class="panel bg-dark padder-v item">
+                    <div class="h1 text-white h1 m-b-sm" ng-model="attackSrcNumber" num-move="-" style="height: 39px">{{attackSrcNumber|number}}</div>
+                    <span class="text-white" translate="attackView.ATTACK_SRC_NUM">攻击源总数</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 画攻击图 -->
+        <div class="row-fluid">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading font-bold" translate="attackView.DDOS_ATTACK_TYPE">DDoS攻击类型分布</div>
+                        <div class="panel-body ">
+                            <div data-iu-chart="attackTypeOption" style="height:350px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6  col-sm-6">
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading font-bold" translate="attackView.DDOS_DEFENSE_24HOURS_TREND">DDoS防御趋势图</div>
+                        <div class="panel-body">
+                            <div data-iu-chart="attackDefenseOption" style="height:350px;"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold" translate="attackView.ATTACK_DETAIL">攻击详情列表</div>
+
+                    <div>
+                        <table class="table table-hover" >
+                            <thead>
+                            <tr>
+                                <th translate="attackView.PO_NAME">保护对象名称</th>
+                                <th translate="attackView.PO_IP">保护对象IP地址</th>
+
+                                <th translate="attackView.ATTACK_SRC_IP">攻击源IP</th>
+                                <th translate="attackView.ATTACK_TYPE">攻击类型</th>
+                                <th translate="attackView.STATUS">状态</th>
+                                <!--<th translate="attackView.ABNORMAL_STARTING_TIME">异常开始时间</th>-->
+                                <th translate="attackView.ATTACK_STARTING_TIME">攻击开始时间</th>
+                                <th translate="attackView.END_TIME">结束时间</th>
+                                <th translate="attackView.DURATION_TIME">持续时间</th>
+                                <th translate="attackView.ATTACK_PKT_NUM">攻击报文数</th>
+                                <th translate="attackView.ATTACK_BYTES_NUM">攻击字节数</th>
+                                <th translate="attackView.ATTACK_PEAK">攻击峰值</th>
+                            </tr>
+                            </thead>
+                            <tbody ng-show="tableLength>0">
+                            <tr ng-repeat="obj in tableJson">
+                                <td data-toggle="tooltip" title="{{obj.poName}}">{{obj.poName}}</td>
+                                <td data-toggle="tooltip" title="{{obj.poIp}}">{{obj.poIp}}</td>
+                                <td data-toggle="tooltip" title="{{obj.attackIp}}">{{obj.attackIp}}</td>
+                                <td data-toggle="tooltip" title="{{obj.attackType}}">{{obj.attackType}}</td>
+                                <td data-toggle="tooltip" title="{{obj.status}}">{{obj.status}}</td>
+                                <!--<td data-toggle="tooltip" title="{{obj.poIp}}">{{obj.startTime}}</td>-->
+                                <td data-toggle="tooltip" title="{{obj.startTime}}">{{obj.startTime}}</td>
+                                <td data-toggle="tooltip" title="{{obj.endTime}}">{{obj.endTime}}</td>
+                                <td data-toggle="tooltip" title="{{obj.duration}}">{{obj.duration}}</td>
+                                <td data-toggle="tooltip" title="{{obj.totalPkts}}">{{obj.totalPkts}}</td>
+                                <td data-toggle="tooltip" title="{{obj.totalBytes}}">{{obj.totalBytes}}</td>
+                                <td data-toggle="tooltip" title="{{obj.peak}}">{{obj.peak}}</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                        <div class="text-center">
+                            <p ng-show="eventTableLoading" translate="commonword.LOADING">加载中</p>
+                            <p ng-show="!tableLength>0 && !eventTableLoading " translate="commonword.NODATA">暂无数据</p>
+                        </div>
+
+                    </div>
+                    <div id="page" class="pull-right m-pagination" ></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

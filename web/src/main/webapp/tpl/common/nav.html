@@ -1,0 +1,320 @@
+<!-- list -->
+<ul class="nav">
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span class="font-bold" translate="aside.nav.HEADER">Navigation</span>
+    </li>
+    <!--<li>-->
+            <!--<li ui-sref-active="active">-->
+                <!--<a ui-sref="app.home">-->
+                    <!--<i class="glyphicon glyphicon-stats icon text-primary-dker"></i>-->
+                    <!--<span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>-->
+                <!--</a>-->
+            <!--</li>-->
+    <!--</li>-->
+
+    <!-- 攻击分析 -->
+    <li ng-show="hasRole('TENANT')">
+        <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-stats icon text-success"></i>
+            <span class="font-bold" translate="aside.nav.ATTACK_ANALYSE">Attack  analyse</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ng-show="hasRole('TENANT')" class="nav-sub-header">
+                <a href>
+                    <span translate="aside.nav.ATTACK_ANALYSE">Attack  analyse</span>
+                </a>
+            </li>
+            <li ng-show="hasRole('TENANT')" ui-sref-active="active selected">
+                <a ui-sref="app.viewAttack">
+                    <span translate="aside.nav.attackanalyse.ATTACK_TOTAL">Attack total</span>
+                </a>
+            </li>
+
+            <li ng-show="hasRole('ADMIN')" ui-sref-active="active selected">
+                <a ui-sref="app.attackLocation">
+                    <span translate="aside.nav.attackanalyse.ATTACK_LOCATION">Attack location</span>
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+    <!-- 流量分析 -->
+    <li ng-show="hasRole('TENANT')">
+        <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+            <span class="font-bold" translate="aside.nav.FLOW_ANALYSE">Flow  analyse</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ng-show="hasRole('TENANT')" class="nav-sub-header">
+                <a href>
+                    <span translate="aside.nav.FLOW_ANALYSE">Flow  analyse</span>
+                </a>
+            </li>
+            <li ng-show="hasRole('ADMIN')" ui-sref-active="active selected">
+                <a ui-sref="app.dataOverview">
+                    <span translate="aside.nav.flowanalyse.FLOW_TOTAL">Flow total</span>
+                </a>
+            </li>
+
+            <li ng-show="hasRole('TENANT')" ui-sref-active="active selected">
+                <a ui-sref="app.trafficDisplay">
+                    <span translate="aside.nav.flowanalyse.FLOW_CONTRAST">Flow contrast</span>
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+
+   <!-- 策略管理 -->
+   <li ng-show="hasRole('TENANT')">
+     <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-calendar icon text-info"></i>
+            <span class="font-bold" translate="aside.nav.POLICY_MANAGEMENT">Policy management</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ng-show="hasRole('TENANT')" class="nav-sub-header">
+                <a href>
+                    <span translate="aside.nav.POLICY_MANAGEMENT">Policy management</span>
+                </a>
+            </li>
+            <li ng-show="hasRole('ADMIN')" ui-sref-active="active selected">
+                <a ui-sref="app.controller">
+                    <span translate="aside.nav.policies.CONTROLLER">Detection device</span>
+                </a>
+            </li>
+
+            <!--<li ng-show="hasRole('ADMIN')" ui-sref-active="active selected">-->
+                <!--<a ui-sref="app.netnode">-->
+                    <!--<span translate="aside.nav.policies.NET_NODE">Network node</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <li ng-show="hasRole('ADMIN')" ui-sref-active="active selected">
+                <a ui-sref="app.cleandev">
+                    <span translate="aside.nav.policies.CLEAN_DEV">Clean device</span>
+                </a>
+            </li>
+
+            <li ng-show="hasRole('TENANT')" ui-sref-active="active selected">
+                <a ui-sref="app.po">
+                    <span translate="aside.nav.policies.PROTECT_OBJECT">Protect object</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+
+
+    <!-- 系统设置 -->
+    <li ng-show="hasRole('ADMIN')">
+        <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-cog icon text-muted"></i>
+            <span class="font-bold" translate="aside.nav.SYSTEM_CONFIG">System Configure</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li class="nav-sub-header">
+                <a href>
+                    <span translate="aside.nav.SYSTEM_CONFIG">System Configure</span>
+                </a>
+            </li>
+            <li ui-sref-active="active selected">
+                <a ui-sref="app.user">
+                    <span translate="aside.nav.USER_MANAGEMENT">User Management</span>
+                </a>
+            </li>
+
+            <li ui-sref-active="active selected">
+                <a ui-sref="app.backup">
+                    <span translate="aside.nav.systems.BACKUP_RESTORE">Backup & restore</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- 流量展示 -->
+    <!--<li>-->
+        <!--<a href class="auto">-->
+      <!--<span class="pull-right text-muted">-->
+        <!--<i class="fa fa-fw fa-angle-right text"></i>-->
+        <!--<i class="fa fa-fw fa-angle-down text-active"></i>-->
+      <!--</span>-->
+            <!--<i class="glyphicon glyphicon-stats icon .text-warning"></i>-->
+            <!--<span class="font-bold" translate="aside.nav.FLOW">Flow</span>-->
+        <!--</a>-->
+        <!--<ul class="nav nav-sub dk">-->
+            <!--<li class="nav-sub-header">-->
+                <!--<a href>-->
+                    <!--<span translate="aside.nav.FLOW">Flow</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!---->
+            <!--<li ui-sref-active="active selected">-->
+                <!--<a ui-sref="app.flowDisplay">-->
+                    <!--<span translate="aside.nav.flows.HISTORY_FLOW">History flow</span>-->
+                <!--</a>-->
+            <!--</li>-->
+
+            <!--<li ui-sref-active="active selected">-->
+                <!--<a ui-sref="app.baseValueDisplay">-->
+                    <!--<span translate="aside.nav.flows.FLOW_BASELINE">Flow baseline</span>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</li>-->
+
+    <!-- 日志 -->
+    <li ng-show="hasRole('USER')">
+        <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-paperclip icon text-danger"></i>
+            <span class="font-bold" translate="aside.nav.LOG">log</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li class="nav-sub-header">
+                <a href>
+                    <span translate="aside.nav.LOG">System log</span>
+                </a>
+            </li>
+            <li ui-sref-active="active selected">
+                <a ui-sref="app.log1">
+                    <span translate="aside.nav.logs.SYSLOG">System log</span>
+                </a>
+            </li>
+            <li ui-sref-active="active selected">
+                <a ui-sref="app.log2">
+                    <span translate="aside.nav.logs.OPLOG">Operation log</span>
+                </a>
+            </li>
+             <li ui-sref-active="active selected">
+                <a ui-sref="app.log3">
+                    <span translate="aside.nav.logs.DEVLOG">CleandDev log</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!--
+  <li ng-show="hasRole('ADMIN')">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-success"></i>
+      <span class="font-bold" translate="aside.nav.CONFIGURATION">Configuration</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.CONFIGURATION">Configuration</span>
+        </a>
+      </li>
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.user">
+          <i class="glyphicon glyphicon-user icon text-info-dker"></i>
+          <span translate="aside.nav.USER_MANAGEMENT">User Management</span>
+        </a>
+      </li>
+
+      -->
+      <!-- 
+      <li ui-sref-active="active selected">
+        <a ui-sref="apps.contact">
+          <i class="glyphicon glyphicon-certificate icon text-info-dker"></i>
+          <span translate="aside.nav.AUTH_MANAGEMENT">Auth Management</span>
+        </a>
+      </li>
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.weather">
+          <i class="glyphicon glyphicon-cog icon text-info-dker"></i>
+          <span translate="aside.nav.SYSTEM_CONFIG">System Configure</span>
+        </a>
+      </li>
+      -->
+    </ul>
+  </li>
+
+<!--
+  <li class="line dk"></li>
+
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span class="font-bold" translate="aside.nav.components.COMPONENTS">Components</span>
+  </li>
+
+  <li ng-class="{active:$state.includes('app.ui')}">
+   <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-briefcase icon"></i>
+      <span class="font-bold" translate="aside.nav.components.COMMON_COMPONENTS">Common Components</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span class="font-bold" translate="aside.nav.components.COMMON_COMPONENTS">Common Components</span>
+        </a>
+      </li>
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.componentTable">
+          <i class="glyphicon glyphicon-list icon text-muted"></i>
+          <span translate="aside.nav.components.table.TABLE_PAGE">Table and Page</span>
+        </a>
+      </li> 
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.componentFileUpload">
+          <i class="glyphicon glyphicon-upload icon text-muted"></i>
+          <span translate="aside.nav.components.FILE_UPLOAD">File Upload</span>
+        </a>
+      </li>
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.componentFileDownload">
+          <i class="glyphicon glyphicon-download icon text-muted"></i>
+          <span translate="aside.nav.components.FILE_DOWNLOAD">File Download</span>
+        </a>
+      </li>
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.datepicker">
+          <i class="glyphicon glyphicon-upload icon text-muted"></i>
+          <span translate="aside.nav.components.DATEPICKER">Datepicker</span>
+        </a>
+      </li>      
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.progressbar">
+          <i class="glyphicon glyphicon-upload icon text-muted"></i>
+          <span translate="aside.nav.components.PROGRESSBAR">Progress Bar</span>
+        </a>
+      </li>           
+      <li ui-sref-active="active selected">
+        <a ui-sref="app.gchart">
+          <i class="glyphicon glyphicon-list icon text-muted"></i>
+          <span translate="aside.nav.components.CHART">Chart</span>
+        </a>
+      </li>            
+    </ul>
+  </li>
+-->
+</ul>
+<!-- / list -->

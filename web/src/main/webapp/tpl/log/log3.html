@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="css/jquery.pagination.css" type="text/css" />
+<div class="col" ng-controller="actionlog3Controller">
+	
+	<!-- 	 
+    <div class="row m-b m-l m-t" >
+        <div class="col-lg-3" style="margin-left:0">
+            <p class="input-group form_datetime">
+                <input type="text" class="form-control" id="datePicker" placeholder="choose start date"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default time"><i class="glyphicon glyphicon-time"></i></button>
+                    </span>
+            </p>
+        </div>
+        <div class="col-lg-3" style="margin-left:0">
+            <p class="input-group form_datetime">
+                <input type="text" class="form-control" id="datePicker2" placeholder="choose end date"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default time"><i class="glyphicon glyphicon-time"></i></button>
+                    </span>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="row  m-b m-l m-t">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="12">
+                    <p class="input-group">
+                        <input type="text" class="form-control" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+
+                    </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	 -->
+	 
+<div class="row m-b m-l m-t">
+     <div class="col-lg-2">
+            <input type="text" name="context" ng-model="formData.context" class="form-control"/>
+    </div>
+    <div class="col-lg-2">
+        <label><input name="error" type="checkbox"  ng-model="formData.error"  class="form-checkbox"/>ERROR</label>
+        <label><input name="warn" type="checkbox" ng-model="formData.warn"  class="form-checkbox"/>WARN</label>
+        <label><input name="info" type="checkbox" ng-model="formData.info"  class="form-checkbox"/>INFO </label><br/>
+        <!-- <label><input name="debug" type="checkbox" ng-model="formData.debug"  class="form-checkbox"/>DEBUG</label><br/>
+		 -->
+		 
+    </div>
+    
+     <div class="col-lg-6">  
+            <button type="button" class="btn-common btn-common-blue btn-common-medium" ng-click="save()">GO</button>
+     </div>
+    
+</div>
+
+    <div class="row  m-b m-l m-t">
+        <div class="col-lg-6">
+            <button type="button" class="btn-common btn-common-red btn-common-medium" ng-click="batchDel()" translate="commonword.DELETE">删除</button>
+            <button type="button" class="btn-common btn-common-red btn-common-medium" ng-click="clearall()" translate="log.CLEAR_ALL">清空日志</button>
+            <a href="data/logs/antiddossystemlog.txt" download="antiddossystemlog.txt" class="btn-common btn-common-blue btn-common-big"  rel="nofollow" title="Download the log.rar" translate="log.DOWNLOAD">开始下载</a>     	
+        </div>
+    </div>
+    
+    <div class="row m-l m-r">
+        <div class="panel panel-default">
+           <div>
+                <table class="table table-hover " >
+                    <thead>
+                    <tr>
+                        <th width="20px"><input type="checkbox" ng-click="toggleCheckAll()" ng-model="chkAll"/></th>
+                        <th width="120px" translate="log.DEVIP">ip地址</th>
+                        <th width="140px" translate="log.LEVEL">级别</th>
+                        <th width="200px" translate="log.TIME">时间</th>
+                        <th translate="log.CONTENT">内容</th>
+                        <th width="88px" translate="log.OPERATE">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-show="userTableLength>0">
+                    <tr   ng-repeat="obj in userTableJson">
+                        <td width="20px"><input type="checkbox" ng-click="toggleCheck(obj._id)" ng-model="obj.checked" /></td>
+                        <th width="120px">{{obj._source.host}}</th>
+                        <td width="140px">{{obj._source.severity_label}}</td>
+                        <td width="200px">{{ obj._source["@timestamp"] | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                        <td>{{obj._source.message}}</td>                        
+                       
+                        <td class="text-center" width="88px">
+                        	 <!--
+                        	<a href title='edit' ng-click="edit({{obj.id}})"><i class='glyphicon glyphicon-edit'></i></a>
+                            -->
+                            <a href title='delete' ng-click="del(obj._id)"><i class='glyphicon glyphicon-trash'></i></a>
+                            <!--
+                            <button type="button" class="btn btn-default" ng-click="edit({{obj.id}})"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button type="button" class="btn btn-default" ng-click="del({{obj.id}})"><i class="glyphicon glyphicon-trash"></i></button>
+                            -->
+                        </td>
+
+                        <!--
+                            <td><a ui-sref="app.userEvaluate({'telNumber':{{obj._source.number}}})">{{obj._source.number}}</a></td>
+                        <td>{{roleArr[obj._source.role]}}</td>
+                        <td>{{obj._source.callingCount}}</td>
+                        <td>{{obj._source.calledCount}}</td>
+                        <td>{{obj._source.avgElapsed}}</td>
+                        <td>{{obj._source.location.province}}</td>
+                        <td>{{obj._source.location.city}}</td>
+
+                        -->
+                    </tr>
+                   </tbody>
+
+                </table>
+                <div class="text-center">
+                    <p ng-show="tableloading" translate="commonword.LOADING">加载中</p>
+                    <p ng-show="!userTableLength>0 && !tableloading " translate="commonword.NODATA">暂无数据</p>
+                </div>
+
+            </div>
+            <div id="page" class="pull-right m-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+

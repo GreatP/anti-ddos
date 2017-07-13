@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="usermanage.USERNAME">用户名</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="userName" name="userName" ng-model="formData.username" class="form-control" ng-blur = "blurCheckUserName()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnUserNameShow"><span translate="usermanage.USERNAME_EMPTY">用户名不能为空</span></div>
+            <div ng-show="warnSameUserName"><span translate="usermanage.USERNAME_SAME">该用户名已存在</span></div>
+        </div>
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="usermanage.NICKNAME">昵称</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="nickName" name="nickName" ng-model="formData.nickName" class="form-control" ng-blur = "blurCheckNickName()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnNickNameShow"><span translate="usermanage.NICKNAME_EMPTY">昵称不能为空</span></div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+       <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+           <span translate="usermanage.ROLES">角色</span><span class="text-danger">*</span>
+       </div>
+       <div class="col-lg-2 col-md-3 col-sm-3">
+           <select id="role" name="role" ng-change="setRole()" ng-model="formData.role" class="form-control">
+               <option value="ADMIN">ADMIN</option>
+               <option value="USER">USER</option>
+               <option value="TENANT">TENANT</option>
+		   </select>
+       </div>
+    </div>
+
+    <!--根据角色判断是否显示下面的配置信息，当角色配置为租户（tenant）时需要配置清洗设备相关信息-->
+    <div ng-show="detectorShow">
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.CONNECT_CLEANDEV">所属清洗设备：</span><span class="text-danger">*</span>
+            </div>
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <select id="cleanDevId" name="cleanDevId" ng-model="formData.cleanDevId" class="form-control">
+                    <option  ng-repeat="obj in cleanDevJson" value={{obj.id}}>{{obj.ip}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.IFACE_PORT">端口：</span><span class="text-danger">*</span>
+            </div>
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <select id="cleanPort" name="iface_port" ng-model="formData.iface_category" class="form-control">
+                    <option  value=1>IN:1,OUT:2</option>
+                    <option  value=2>IN:3,OUT:4</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-3 col-md-6 col-sm-6">
+            <input type="hidden" name="id" value="{{id}}" />
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="save()" translate="commonword.SAVE">保存</button>
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="goBack()" translate="commonword.BACK">返回</button>
+        </div>
+    </div>
+</div>
+
+

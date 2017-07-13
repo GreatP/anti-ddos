@@ -1,0 +1,666 @@
+<div class="container-fluid">
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3">
+        </div>
+        <div class="text-danger">
+            <div ng-show="saveErrShow" translate="commonword.SAVE_FAIL">保存PO配置失败</div>
+            <div ng-show="getErrShow" translate="commonword.GET_FAIL">获取PO配置失败</div>
+        </div>
+    </div>
+<div class="row row-fluid m-b m-l m-t" >
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.NAME">名称：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2">
+        <input type="text" id="name" name="name" maxlength="64" ng-model="formData.name" class="form-control" ng-blur = "blurCheckName()"/>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+        <div ng-show="warnNameShow"><span translate="po.NAME_EMPTY">名称不能为空</span></div>
+        <div ng-show="warnSameShow"><span translate="po.NAME_EXIST">该保护对象名称已存在</span></div>
+    </div>
+</div>
+
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="po.CONNECT_MODE">连接模式：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <label><input name="mode" id="tadenm_mode" type="radio" ng-model="formData.mode" value="0" ng-click="check_tadem()" /><span translate="po.TADEM_MODE">串联模式</span></label>
+        <label><input name="mode" id="bypass_mode" type="radio" ng-model="formData.mode" value="1" ng-click="check_bypass()"/><span translate="po.BYPASS_MODE">旁路模式</span></label>
+    </div>
+</div>
+
+<div ng-show="detectorShow">
+    <div class="padder-md">
+        <div class="row row-fluid m-b m-l m-t">
+            <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.CONNECT_SWITCH">所属检测设备：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <select id="controllerId" name="controllerId" ng-model="formData.controllerId" class="form-control">
+                    <option id="no1"  ng-repeat="obj in nodeJson" value={{obj.id}}>{{obj.ip}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+            <!--</div>-->
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.INPUT_PORT">外网接口：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" id="inport" name="inport" maxlength="16" ng-model="formData.inport" class="form-control"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+            <div ng-show="warnInputportShow" translate="po.INPUT_PORT_EMPTY">外网接口不能为空</span></div>
+        </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+            <!--</div>-->
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.OUTPUT_PORT">内网接口：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" id="outport" name="outport" maxlength="16" ng-model="formData.outport" class="form-control" ng-blur = "blurCheckOutputport()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+                <div ng-show="warnOutputportShow" translate="po.OUTPUT_PORT_EMPTY">内网接口不能为空</div>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+            <!--</div>-->
+            <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+                <span translate="po.GUIDE_PORT">引流端口：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" id="guidePort" name="guidePort" maxlength="16" ng-model="formData.guidePort" class="form-control"   ng-blur = "blurCheckGuideport()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+                <div ng-show="warnGuideportShow"><span translate="po.GUIDE_PORT_EMPTY">引流接口不能为空</span></div>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+                <span translate="po.REINJECTION_PORT">回注接口：</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" name="reinjection_port" id="reinjection_port" maxlength="16" ng-model="formData.reinjection_port" class="form-control"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.PROTECT_NETWORK">保护网络：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <input type="text" id="network" name="network" maxlength="64" ng-model="formData.network" class="form-control" ng-blur = "blurCheckPn()"/>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+        <div ng-show="warnPnShow"><span translate="po.PROTECT_NETWORK_EMPTY">保护网络输入不正确，格式为如10.10.10.10/32</span></div>
+        <div ng-show="warnSameNetWorkShow"><span translate="po.NETWORK_EXIST">保护网络信息已存在</span></div>
+        <div ng-show="warnPnNullShow"><span translate="po.PROTECT_NETWORK_NULL">保护网络不能为空</span></div>
+    </div>
+</div>
+
+    <!-------------------------------在PO配置中添加选择租户下拉列表框------------------->
+<div ng-show="hasRole('ADMIN')" class="row row-fluid m-b m-l m-t">
+    <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+    <!--</div>-->
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.TENANT">选择租户:</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <select id="tenantId" name="tenantId" ng-model="formData.tenantId" class="form-control">
+            <option value=-1 translate="po.SELECT_TENANT">---请选择租户---</option>
+            <option  ng-repeat="obj in tenantIdJson" value={{obj.id}}>{{obj.username}}</option>
+        </select>
+    </div>
+</div>
+
+    <!--------------------------------------------------------------------->
+
+<!--  
+<div class="row m-b m-l m-t">
+    <div  class="col-lg-2">
+      IP类型：
+    </div>
+    <div class="col-lg-2">
+        <input type="text" name="ipType" ng-model="formData.ipType" class="form-control"/>
+    </div>
+</div>
+-->
+
+ <!--
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">
+    </div>
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.INPUT_PORT">输入端口：</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <input type="text" name="cleanInport" maxlength="64" ng-model="formData.cleanInport" class="form-control"/>
+    </div>
+</div>
+
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">
+    </div>
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.OUTPUT_PORT">输出端口：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <input type="text" id="cleanOutport" name="cleanOutport" maxlength="64" ng-model="formData.cleanOutport" class="form-control" ng-blur = "blurCheckCleanOutputport()"/>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+        <div ng-show="warnCleanOutputportShow"><span translate="po.OUTPUT_PORT_EMPTY">输出端口不能为空</span></div>
+    </div>
+</div>
+-->
+
+<!--
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.DEFENSE_TYPE">防御类型：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <select id="defenseType" name="defenseType" ng-model="formData.defenseType" class="form-control" ng-click="blurCheckDefensetype()">
+            <option  ng-repeat="obj in defensetype" value={{obj.type}}>{{obj.name}}</option>
+		</select>
+    </div>
+</div>
+
+
+
+<div class="row row-fluid m-b m-l m-t">
+    <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+        <span translate="po.CONNECT_SWITCH">所属交换机：</span><span class="text-danger">*</span>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+        <select id="1" name="defenseType" ng-model="formData.netnode_id" class="form-control" disabled="disabled">
+           <option id="no1"  ng-repeat="obj in nodeJson" value={{obj.id}}>{{obj.name}}</option>
+		</select>
+    </div>
+</div>
+-->
+
+<div ng-show="detectorCleanDevShow">
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">-->
+            <!--<span translate="po.CLEAN_DEV">清洗设备：</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="row row-fluid m-b m-l m-t">
+        <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+        <!--</div>-->
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="po.CONNECT_CLEANDEV">所属清洗设备：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <select id="cleanDevId" name="cleanDevId" ng-model="formData.cleanDevId" class="form-control">
+                <option  ng-repeat="obj in cleanDevJson" value={{obj.id}}>{{obj.ip}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+        <!--</div>-->
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="po.IFACE_PORT">端口：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <select id="cleanPort" name="iface_port" ng-model="formData.iface_category" class="form-control">
+                <option  value=1>外网口:1,内网口:2</option>
+                <option  value=2>外网口:3,内网口:4</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+
+<div ng-show="detectorShowForm">
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">-->
+            <!--<span translate="po.CLEAN_DEV">清洗设备：</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+        <!--</div>-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">-->
+            <!--<span translate="po.CONNECT_CLEANDEV">所属清洗设备：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<select id="cleanDevId" name="cleanDevId" ng-model="formData.cleanDevId" class="form-control">-->
+                <!--<option  ng-repeat="obj in cleanDevJson" value={{obj.id}}>{{obj.ip}}</option>-->
+            <!--</select>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-1 col-md-1 col-sm-1  m-t-xs">-->
+        <!--</div>-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">-->
+            <!--<span translate="po.IFACE_PORT">端口：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<select id="1" name="iface_port" ng-model="formData.iface_category" class="form-control">-->
+                <!--<option  value=1>IN:1,OUT:2</option>-->
+                <!--<option  value=2>IN:3,OUT:4</option>-->
+            <!--</select>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--<div class="row row-fluid m-b m-l m-t">-->
+    <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+        <!--<label><input name="checkDetector" id="checkDetector" type="checkbox" ng-model="formData.checkDetector"  class="form-checkbox" ng-click="clickCheckShowDetector()" /><span translate="po.EXIST_DETECTOR">包含检测设备?</span> </label>-->
+    <!--</div>-->
+<!--</div>-->
+
+</div>
+
+
+
+<!--<div class="row row-fluid m-b m-l m-t">-->
+    <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">-->
+        <!--<span translate="po.PROTOCOL">协议：</span><span class="text-danger">*</span>-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+        <!--<label><input name="tcp " type="checkbox" ng-model="formData.tcp"  class="form-checkbox" /><span translate="protocol.TCP">TCP</span> </label>-->
+        <!--<label><input name="upd " type="checkbox" ng-model="formData.udp"  class="form-checkbox" /><span translate="protocol.UDP">UDP</span> </label>-->
+        <!--<label><input name="icmp" type="checkbox" ng-model="formData.icmp"  class="form-checkbox" /><span translate="protocol.ICMP">ICMP</span> </label>-->
+        <!--<label><input name="any " type="checkbox" ng-model="formData.any"  class="form-checkbox" /><span translate="protocol.OTHER">Other</span> </label><br/>-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+        <!--<div ng-show="warnProtocolShow"><span translate="po.PROTOCOL_EMPTY">协议不能为空</span></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+    <!--为PO添加各协议的阀值-->
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.CHECK_INTERVAL">检测周期：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="check_interval" name="check_interval" maxlength="18" ng-model="formData.check_interval" class="form-control" ng-blur = "blurCheckInterval()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckIntervalShow"><span translate="cleandev.CHECK_INTERVAL_EMPTY">检测周期不能为空</span></div>
+            <div ng-show="warnCheckIntervalNumShow" translate="cleandev.INVALID_NUM">检测周期值只能为数字</div>
+            <div ng-show="warnCheckIntervalRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+            <!--<span translate="cleandev.TCP_FLOOD_THRESHOLD">TCP洪水阀值：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<input type="text" id="tcp_flood" name="tcp_flood" maxlength="18" ng-model="formData.tcp_flood" class="form-control" ng-blur = "blurCheckTcpFlood()"/>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+            <!--<div ng-show="warnCheckTcpShow"><span translate="cleandev.TCP_FLOOD_THRESHOLD_EMPTY">TCP洪水阀值不能为空</span></div>-->
+            <!--<div ng-show="warnCheckTcpNumShow" translate="cleandev.INVALID_NUM">TCP洪水阀值只能为数字</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="po.IPOPTION_THRESHOLD">IP Option洪水阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="ipoption_threshold" name="ipoption_threshold" maxlength="18" ng-model="formData.ipoption_threshold" class="form-control" ng-blur = "blurCheckIpOption()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckIpOptionShow"><span translate="po.IPOPTION_THRESHOLD_EMPTY">IP option洪水阀值不能为空</span></div>
+            <div ng-show="warnCheckIpOptionNumShow" translate="cleandev.INVALID_NUM">IP option洪水阀值只能为数字</div>
+            <div ng-show="warnCheckIpOptionRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.TCP_SYN_CLEAN">TCP SYN清洗阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="tcp_syn" name="tcp_syn" maxlength="18" ng-model="formData.tcp_syn" class="form-control" ng-blur = "blurCheckTcpSYN()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckTcpSynShow"><span translate="cleandev.TCP_SYN_CLEAN_EMPTY">TCP SYN清洗阀值不能为空</span></div>
+            <div ng-show="warnCheckTcpSynNumShow" translate="cleandev.INVALID_NUM">TCP SYN清洗阀值只能为数字</div>
+            <div ng-show="warnCheckTcpSynRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.TCP_SYNACK_CLEAN">TCP SYN+ACK清洗阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="tcp_synack" name="tcp_synack" maxlength="18" ng-model="formData.tcp_synack" class="form-control" ng-blur = "blurCheckTcpSynAck()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckTcpSynAckShow"><span translate="cleandev.TCP_SYNACK_CLEAN_EMPTY">TCP SYN+ACK清洗阀值不能为空</span></div>
+            <div ng-show="warnCheckTcpSynAckNumShow" translate="cleandev.INVALID_NUM">TCP SYN+ACK清洗阀值只能为数字</div>
+            <div ng-show="warnCheckTcpSynAckRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.UDP_THRESHOLD">UDP洪水阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="udp_threshold" name="udp_threshold" maxlength="18" ng-model="formData.udp_threshold" class="form-control" ng-blur = "blurCheckUDP()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckUdpShow"><span translate="cleandev.UDP_THRESHOLD_EMPTY">UDP洪水阀值不能为空</span></div>
+            <div ng-show="warnCheckUdpNumShow" translate="cleandev.INVALID_NUM">UDP洪水阀值只能为数字</div>
+            <div ng-show="warnCheckUdpRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.ICMP_THRESHOLD">ICMP洪水阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="icmp_threshold" name="icmp_threshold" maxlength="18" ng-model="formData.icmp_threshold" class="form-control" ng-blur = "blurCheckICMP()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckIcmpShow"><span translate="cleandev.ICMP_THRESHOLD_EMPTY">ICMP洪水阀值不能为空</span></div>
+            <div ng-show="warnCheckIcmpNumShow" translate="cleandev.INVALID_NUM">ICMP洪水阀值只能为数字</div>
+            <div ng-show="warnCheckIcmpRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="po.ICMP_REDIRECT">ICMP重定向：</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="checkbox" name="icmp_redirect"  id="icmp_redirect" ng-model="formData.icmp_redirect"  class="form-checkbox" />
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="cleandev.HTTP_SRC_AUTH">HTTP源认证：</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="checkbox" name="http_src_auth"  id="http_src_auth" ng-model="formData.http_src_auth"  class="form-checkbox" />
+        </div>
+    </div>
+
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+    <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+    <!--<span translate="cleandev.ICMP_ABNORMAL_CLEAN">ICMP异常报文清洗阀值：</span><span class="text-danger">*</span>-->
+    <!--</div>-->
+    <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+    <!--<input type="text" id="icmp_abnormal" name="icmp_abnormal" maxlength="18" ng-model="formData.icmp_abnormal" class="form-control" ng-blur = "blurCheckICMPAbnormal()"/>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+    <!--<div ng-show="warnCheckIcmpAbnormalShow"><span translate="cleandev.ICMP_ABNORMAL_CLEAN_EMPTY">ICMP异常报文清洗阀值不能为空</span></div>-->
+    <!--<div ng-show="warnCheckIcmpAbnormalNumShow" translate="cleandev.INVALID_NUM">ICMP异常报文清洗阀值只能为数字</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+            <!--<span translate="cleandev.HTTP_THRESHOLD">HTTP洪水阀值：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<input type="text" id="http" name="http" maxlength="18" ng-model="formData.http" class="form-control" ng-blur = "blurCheckHttp()"/>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+            <!--<div ng-show="warnCheckHttpShow"><span translate="cleandev.HTTP_THRESHOLD_EMPTY">HTTP洪水阀值不能为空</span></div>-->
+            <!--<div ng-show="warnCheckHttpNumShow" translate="cleandev.INVALID_NUM">HTTP洪水阀值只能为数字</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.HTTP_REQUEST_THRESHOLD">HTTP Request阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="http_request" name="http_request" maxlength="18" ng-model="formData.http_request" class="form-control" ng-blur = "blurCheckHttpRequest()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckHttpRequestShow"><span translate="cleandev.HTTP_REQUEST_THRESHOLD_EMPTY">HTTP Request阀值不能为空</span></div>
+            <div ng-show="warnCheckHttpRequestNumShow" translate="cleandev.INVALID_NUM">HTTP Request阀值只能为数字</div>
+            <div ng-show="warnCheckHttpRequestRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+            <!--<span translate="cleandev.HTTP_POST_THRESHOLD">HTTP Post阀值：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<input type="text" id="http_post" name="http_post" maxlength="18" ng-model="formData.http_post" class="form-control" ng-blur = "blurCheckHttpPost()"/>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+            <!--<div ng-show="warnCheckHttpPostShow"><span translate="cleandev.HTTP_POST_THRESHOLD_EMPTY">HTTP Post阀值不能为空</span></div>-->
+            <!--<div ng-show="warnCheckHttpPostNumShow" translate="cleandev.INVALID_NUM">HTTP Post阀值只能为数字</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.HTTP_PORT">HTTP端口号：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="http_port" name="http_port" maxlength="18" ng-model="formData.http_port" class="form-control" ng-blur = "blurCheckHttpPort()" />
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckHttpPortShow"><span translate="cleandev.HTTP_PORT_EMPTY">HTTP端口号不能为空</span></div>
+            <div ng-show="warnCheckHttpPortNumShow" translate="cleandev.INVALID_NUM">HTTP端口号只能为数字</div>
+            <div ng-show="warnHttpPortRangeShow" translate="cleandev.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.HTTPS_REQUEST_THRESHOLD">HTTPS Request阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="https_request" name="https_request" maxlength="18" ng-model="formData.https_request" class="form-control" ng-blur = "blurCheckHttpsRequest()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckHttpsRequestShow"><span translate="cleandev.HTTPS_REQUEST_THRESHOLD_EMPTY">HTTPS Request阀值不能为空</span></div>
+            <div ng-show="warnCheckHttpsRequestNumShow" translate="cleandev.INVALID_NUM">HTTPS Request阀值只能为数字</div>
+            <div ng-show="warnCheckHttpRequestRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+            <!--<span translate="cleandev.HTTPS_THC_THRESHOLD">HTTPS Thc阀值：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<input type="text" id="https_thc" name="https_thc" maxlength="18" ng-model="formData.https_thc" class="form-control" ng-blur = "blurCheckHttpsThc()"/>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+            <!--<div ng-show="warnCheckHttpsThcShow"><span translate="cleandev.HTTPS_THC_THRESHOLD_EMPTY">HTTPS Thc阀值不能为空</span></div>-->
+            <!--<div ng-show="warnCheckHttpsThcNumShow" translate="cleandev.INVALID_NUM">HTTPS Thc阀值只能为数字</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.HTTPS_PORT">HTTPS端口号：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="https_port" name="https_port" maxlength="18" ng-model="formData.https_port" class="form-control" ng-blur = "blurCheckHttpsPort()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckHttpsPortShow"><span translate="cleandev.HTTPS_PORT_EMPTY">HTTPS端口号不能为空</span></div>
+            <div ng-show="warnCheckHttpsPortNumShow" translate="cleandev.INVALID_NUM">HTTPS端口号只能为数字</div>
+            <div ng-show="warnHttpsPortRangeShow" translate="cleandev.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.DNS_REQ_THRESHOLD">DNS请求报文阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="dns_req" name="dns_req" maxlength="18" ng-model="formData.dns_req" class="form-control" ng-blur = "blurCheckDnsReq()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckDnsReqShow"><span translate="cleandev.DNS_REQ_THRESHOLD_EMPTY">DNS请求报文阀值不能为空</span></div>
+            <div ng-show="warnCheckDnsReqNumShow" translate="cleandev.INVALID_NUM">DNS请求报文阀值只能为数字</div>
+            <div ng-show="warnCheckDnsReqRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.DNS_REP_THRESHOLD">DNS应答报文阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="dns_rep" name="dns_rep" maxlength="18" ng-model="formData.dns_rep" class="form-control" ng-blur = "blurCheckDnsRep()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckDnsRepShow"><span translate="cleandev.DNS_REP_THRESHOLD_EMPTY">DNS应答报文阀值不能为空</span></div>
+            <div ng-show="warnCheckDnsRepNumShow" translate="cleandev.INVALID_NUM">DNS应答报文阀值只能为数字</div>
+            <div ng-show="warnCheckDnsRepRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999之间</div>
+        </div>
+    </div>
+
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">-->
+            <!--<span translate="cleandev.DNS_ABNORMAL_CLEAN">DNS异常报文清洗阀值：</span><span class="text-danger">*</span>-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<input type="text" id="dns_abnormal" name="dns_abnormal" maxlength="18" ng-model="formData.dns_abnormal" class="form-control" ng-blur = "blurCheckDnsAbnormal()"/>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">-->
+            <!--<div ng-show="warnCheckDnsAbnormalShow"><span translate="cleandev.DNS_ABNORMAL_CLEAN_EMPTY">DNS异常报文清洗阀值不能为空</span></div>-->
+            <!--<div ng-show="warnCheckDnsAbnormalNumShow" translate="cleandev.INVALID_NUM">DNS异常报文清洗阀值只能为数字</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.DNS_PORT">DNS端口号：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="dns_port" name="dns_port" maxlength="18" ng-model="formData.dns_port" class="form-control" ng-blur = "blurCheckDnsPort()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckDnsPortShow"><span translate="cleandev.DNS_PORT_EMPTY">DNS端口号不能为空</span></div>
+            <div ng-show="warnCheckDnsPortNumShow" translate="cleandev.INVALID_NUM">DNS端口号只能为数字</div>
+            <div ng-show="warnDnsPortRangeShow" translate="cleandev.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+
+    <!--/******************************for ntp and snmp***************************************/-->
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.NTP_THRESHOLD">NTP清洗阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="ntp" name="ntp" maxlength="10" ng-model="formData.ntp" class="form-control" ng-blur = "blurCheckNtp()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckNtpShow"><span translate="cleandev.NTP_THRESHOLD_EMPTY">NTP报文清洗阀值不能为空</span></div>
+            <div ng-show="warnCheckNtpNumShow" translate="cleandev.INVALID_NUM">NTP报文清洗阀值只能为数字</div>
+            <div ng-show="warnCheckNtpRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999</div>
+        </div>
+    </div>
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.NTP_PORT">NTP端口号：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="ntp_port" name="ntp_port" maxlength="18" ng-model="formData.ntp_port" class="form-control" ng-blur = "blurCheckNtpPort()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckNtpPortShow"><span translate="cleandev.NTP_PORT_EMPTY">NTP端口号不能为空</span></div>
+            <div ng-show="warnCheckNtpPortNumShow" translate="cleandev.INVALID_NUM">NTP端口号只能为数字</div>
+            <div ng-show="warnCheckNtpPortRangeShow" translate="cleandev.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.SNMP_THRESHOLD">SNMP清洗阀值：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="snmp" name="snmp" maxlength="10" ng-model="formData.snmp" class="form-control" ng-blur = "blurCheckSnmp()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckSnmpShow"><span translate="cleandev.SNMP_THRESHOLD_EMPTY">SNMP报文清洗阀值不能为空</span></div>
+            <div ng-show="warnCheckSnmpNumShow" translate="cleandev.INVALID_NUM">SNMP报文清洗阀值只能为数字</div>
+            <div ng-show="warnCheckSnmpRangeShow" translate="cleandev.THRESHOLD_RANGE">阀值范围必须在1-9999999999</div>
+        </div>
+    </div>
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="cleandev.SNMP_PORT">SNMP端口号：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="snmp_port" name="snmp_port" maxlength="18" ng-model="formData.snmp_port" class="form-control" ng-blur = "blurCheckSnmpPort()"/>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnCheckSnmpPortShow"><span translate="cleandev.SNMP_PORT_EMPTY">SNMP端口号不能为空</span></div>
+            <div ng-show="warnCheckSnmpPortNumShow" translate="cleandev.INVALID_NUM">SNMP端口号只能为数字</div>
+            <div ng-show="warnCheckSnmpPortRangeShow" translate="cleandev.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+    <!--********************************************************************************************************-->
+
+
+<div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-3 col-md-6 col-sm-6">
+            <input type="hidden" name="id" value="{{id}}" />
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="save()" translate="commonword.SAVE">保存</button>
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="goBack()" translate="commonword.BACK">返回</button>
+        </div>
+    </div>
+</div>
+
+

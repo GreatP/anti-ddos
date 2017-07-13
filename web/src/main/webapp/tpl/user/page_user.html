@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3" translate="usermanage.USERNAME">
+            用户名：
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <td>{{userTableJson.username}}</td>
+        </div>
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3" translate="usermanage.NICKNAME">
+            昵称：
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+        	<td>{{userTableJson.nickName}}</td>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+       <div  class="col-lg-2 col-md-3 col-sm-3" translate="usermanage.ROLES">
+           角色：
+       </div>
+       <div class="col-lg-2 col-md-3 col-sm-3">
+           <td>{{userTableJson.role}}</td>
+       </div>
+    </div>
+    
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-3 col-md-6 col-sm-6">
+            <button type="button" class="btn-common btn-common-blue btn-common-big" ng-click="pageEdit(passId)" translate="commonword.EDIT">编辑</button>
+        </div>
+    </div>
+
+</div>
+
+

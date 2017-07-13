@@ -1,0 +1,29 @@
+
+
+<div class="row-fluid">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading font-bold">攻击源分布</div>
+            <div class="panel-body ">
+                <div data-iu-chart="ipCityOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //$(function(){ style="height:800px;"
+    function initPage() {
+        var wHeight = $(window).height();
+        var cHeight =( wHeight-170);
+        if(cHeight > 0) {
+            $(".iuChart").height(cHeight);
+        }
+    }
+
+    initPage();
+    $(window).resize(function () {
+        initPage()
+    });
+    //});
+</script>

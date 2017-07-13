@@ -1,0 +1,2860 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>天盾Anti-DDos产品</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:幼圆;
+	panose-1:2 1 5 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 3 5 10 3 4;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:楷体_GB2312;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@幼圆";
+	panose-1:2 1 5 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@楷体_GB2312";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+h1
+	{mso-style-link:"标题 1 Char";
+	margin-top:15.6pt;
+	margin-right:0cm;
+	margin-bottom:15.6pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.6pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;}
+h2
+	{mso-style-link:"标题 2 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-28.8pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;}
+h3
+	{mso-style-link:"标题 3 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-indent:-36.0pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;}
+h4
+	{mso-style-link:"标题 4 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-43.2pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;
+	color:#0070C0;}
+h5
+	{mso-style-link:"标题 5 Char";
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:14.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:155%;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	font-family:"微软雅黑",sans-serif;}
+h6
+	{mso-style-link:"标题 6 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:133%;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"标题 7 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:133%;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"标题 8 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:133%;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"标题 9 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.2pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:133%;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;
+	font-variant:small-caps;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:31.5pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:52.5pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:63.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:73.5pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"批注文字 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"微软雅黑",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"微软雅黑",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:7.6pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:10.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:11.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"标题 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:10.0pt;
+	text-align:center;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:16.0pt;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"正文文本 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:26.0pt;
+	font-family:"Times New Roman",serif;
+	color:teal;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"文档结构图 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:宋体;}
+pre
+	{mso-style-link:"HTML 预设格式 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"批注主题 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"批注框文本 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"微软雅黑",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-indent:-21.6pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;}
+p.1, li.1, div.1
+	{mso-style-name:列出段落1;
+	mso-style-link:"列出段落 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-indent:21.0pt;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+p.quote1, li.quote1, div.quote1
+	{mso-style-name:quote样式1;
+	mso-style-link:"quote样式1 Char";
+	margin-top:0cm;
+	margin-right:-11.55pt;
+	margin-bottom:0cm;
+	margin-left:7.05pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:.05pt;
+	line-height:18.0pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#244061;
+	letter-spacing:.1pt;
+	layout-grid-mode:line;}
+p.10, li.10, div.10
+	{mso-style-name:联系方式1;
+	mso-style-link:"联系方式1 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.5pt;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:.1pt;
+	layout-grid-mode:line;}
+p.11, li.11, div.11
+	{mso-style-name:无间隔1;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+p.Slogan, li.Slogan, div.Slogan
+	{mso-style-name:页眉Slogan;
+	mso-style-link:"页眉Slogan Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	layout-grid-mode:char;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:"微软雅黑",sans-serif;
+	letter-spacing:.8pt;}
+p.foot1, li.foot1, div.foot1
+	{mso-style-name:foot样式1;
+	mso-style-link:"foot样式1 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:120%;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:"Palatino Linotype",serif;
+	color:#7F7F7F;
+	letter-spacing:.1pt;
+	layout-grid-mode:line;}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-link:"标题 1";
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.2Char
+	{mso-style-name:"标题 2 Char";
+	mso-style-link:"标题 2";
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.3Char
+	{mso-style-name:"标题 3 Char";
+	mso-style-link:"标题 3";
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.4Char
+	{mso-style-name:"标题 4 Char";
+	mso-style-link:"标题 4";
+	font-family:"Cambria",serif;
+	color:#0070C0;
+	font-weight:bold;}
+span.5Char
+	{mso-style-name:"标题 5 Char";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.6Char
+	{mso-style-name:"标题 6 Char";
+	mso-style-link:"标题 6";
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.7Char
+	{mso-style-name:"标题 7 Char";
+	mso-style-link:"标题 7";
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.8Char
+	{mso-style-name:"标题 8 Char";
+	mso-style-link:"标题 8";
+	font-family:"Cambria",serif;}
+span.9Char
+	{mso-style-name:"标题 9 Char";
+	mso-style-link:"标题 9";
+	font-family:"Cambria",serif;}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;
+	font-family:"微软雅黑",sans-serif;}
+span.Char1
+	{mso-style-name:"文档结构图 Char";
+	mso-style-link:文档结构图;
+	font-family:宋体;}
+span.Char2
+	{mso-style-name:"批注框文本 Char";
+	mso-style-link:批注框文本;
+	font-family:"微软雅黑",sans-serif;}
+span.Char3
+	{mso-style-name:"标题 Char";
+	mso-style-link:标题;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.quote1Char
+	{mso-style-name:"quote样式1 Char";
+	mso-style-link:quote样式1;
+	font-family:"微软雅黑",sans-serif;
+	color:#244061;
+	letter-spacing:.1pt;
+	layout-grid-mode:both;}
+span.1Char0
+	{mso-style-name:"联系方式1 Char";
+	mso-style-link:联系方式1;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:.1pt;
+	layout-grid-mode:both;}
+span.Char4
+	{mso-style-name:"批注文字 Char";
+	mso-style-link:批注文字;
+	font-family:"微软雅黑",sans-serif;}
+span.Char5
+	{mso-style-name:"批注主题 Char";
+	mso-style-link:批注主题;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.Char6
+	{mso-style-name:"列出段落 Char";
+	mso-style-link:列出段落1;
+	font-family:"微软雅黑",sans-serif;}
+span.SloganChar
+	{mso-style-name:"页眉Slogan Char";
+	mso-style-link:页眉Slogan;
+	font-family:"微软雅黑",sans-serif;
+	color:windowtext;
+	letter-spacing:.8pt;}
+span.foot1Char
+	{mso-style-name:"foot样式1 Char";
+	mso-style-link:foot样式1;
+	font-family:"Palatino Linotype",serif;
+	color:#7F7F7F;
+	letter-spacing:.1pt;
+	layout-grid-mode:both;}
+p.a, li.a, div.a
+	{mso-style-name:封面标题;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:150%;
+	background:white;
+	border:none;
+	padding:0cm;
+	font-size:22.0pt;
+	font-family:"Times New Roman",serif;}
+p.a0, li.a0, div.a0
+	{mso-style-name:封面日期;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:150%;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+p.a1, li.a1, div.a1
+	{mso-style-name:封面标签;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:黑体;}
+p.a2, li.a2, div.a2
+	{mso-style-name:封面签名;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:150%;
+	background:white;
+	border:none;
+	padding:0cm;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;}
+p.a3, li.a3, div.a3
+	{mso-style-name:部分标题;
+	margin-top:15.6pt;
+	margin-right:0cm;
+	margin-bottom:15.6pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:150%;
+	page-break-before:always;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Times New Roman",serif;
+	text-shadow:auto;}
+p.a4, li.a4, div.a4
+	{mso-style-name:部分内容简述;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.a5, li.a5, div.a5
+	{mso-style-name:一级列表;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.a6, li.a6, div.a6
+	{mso-style-name:图;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	background:#D8D8D8;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.a7, li.a7, div.a7
+	{mso-style-name:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:120%;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"微软雅黑",sans-serif;}
+p.a8, li.a8, div.a8
+	{mso-style-name:二级列表;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:31.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.0pt;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.a9, li.a9, div.a9
+	{mso-style-name:表格正文;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;}
+p.aa, li.aa, div.aa
+	{mso-style-name:封面摘要;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.ab, li.ab, div.ab
+	{mso-style-name:注释;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:red;}
+span.Char7
+	{mso-style-name:"正文文本 Char";
+	mso-style-link:正文文本;
+	font-family:隶书;
+	color:teal;}
+span.HTMLChar
+	{mso-style-name:"HTML 预设格式 Char";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+span.description
+	{mso-style-name:description;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+p.ac, li.ac, div.ac
+	{mso-style-name:正文格式;
+	mso-style-link:"正文格式 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:24.1pt;
+	line-height:20.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Char8
+	{mso-style-name:"正文格式 Char";
+	mso-style-link:正文格式;}
+p.4, li.4, div.4
+	{mso-style-name:标题4;
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-43.2pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;
+	color:#0070C0;
+	font-weight:bold;}
+p.12, li.12, div.12
+	{mso-style-name:标题1;
+	mso-style-link:"标题1 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:2.5pt;
+	margin-left:21.55pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.55pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+p.2, li.2, div.2
+	{mso-style-name:标题2;
+	mso-style-link:"标题2 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:2.5pt;
+	margin-left:28.9pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-28.9pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.1Char1
+	{mso-style-name:"标题1 Char";
+	mso-style-link:标题1;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+p.3, li.3, div.3
+	{mso-style-name:标题3;
+	mso-style-link:"标题3 Char";
+	margin-top:2.5pt;
+	margin-right:0cm;
+	margin-bottom:2.5pt;
+	margin-left:0cm;
+	text-indent:-36.0pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.2Char0
+	{mso-style-name:"标题2 Char";
+	mso-style-link:标题2;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+p.40, li.40, div.40
+	{mso-style-name:4级标题;
+	mso-style-link:"4级标题 Char";
+	margin-top:7.8pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-43.2pt;
+	line-height:22.0pt;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Cambria",serif;
+	color:#0070C0;
+	font-weight:bold;}
+span.3Char0
+	{mso-style-name:"标题3 Char";
+	mso-style-link:标题3;
+	font-family:"Calibri",sans-serif;
+	color:#006CB6;
+	font-weight:bold;}
+span.4Char0
+	{mso-style-name:"4级标题 Char";
+	mso-style-link:4级标题;
+	font-family:"Cambria",serif;
+	color:#0070C0;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 3.0cm 42.55pt 3.0cm;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:96.4pt 89.85pt 42.55pt 89.85pt;
+	layout-grid:15.6pt 0pt;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:96.4pt 89.85pt 42.55pt 89.85pt;
+	layout-grid:15.6pt 0pt;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:595.3pt 841.9pt;
+	margin:96.4pt 89.85pt 42.55pt 89.85pt;
+	layout-grid:15.6pt 0pt;}
+div.WordSection4
+	{page:WordSection4;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=left style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:left;text-indent:52.2pt;
+line-height:130%'><b><span lang=EN-US style='font-size:26.0pt;line-height:130%;
+font-family:"Calibri",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:52.2pt;
+line-height:130%'><b><span lang=EN-US style='font-size:26.0pt;line-height:130%;
+font-family:"Calibri",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:52.2pt;
+line-height:130%'><b><span lang=EN-US style='font-size:26.0pt;line-height:130%;
+font-family:"Calibri",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:52.2pt;
+line-height:130%'><b><span lang=EN-US style='font-size:26.0pt;line-height:130%;
+font-family:"Calibri",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:52.2pt;line-height:normal;layout-grid-mode:both'><b><span
+style='font-size:26.0pt;font-family:宋体'>天盾</span></b><b><span lang=EN-US
+style='font-size:26.0pt;font-family:"Calibri",sans-serif'>Anti-DDoS</span></b><b><span
+style='font-size:26.0pt;font-family:宋体'>系统</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:52.2pt;
+line-height:130%'><b><span style='font-size:26.0pt;line-height:130%;font-family:
+宋体'>用户手册</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:52.2pt;
+line-height:130%'><b><span lang=EN-US style='font-size:26.0pt;line-height:130%;
+font-family:"Calibri",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:15.6pt;margin-right:0cm;
+margin-bottom:15.6pt;margin-left:0cm;text-align:center;text-indent:36.0pt;
+line-height:130%;text-autospace:none'><span lang=EN-US style='font-size:18.0pt;
+line-height:130%;font-family:"Calibri",sans-serif'>V1.0</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><span lang=EN-US style='font-family:"Courier New"'>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Courier New"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='margin-left:0cm;text-align:left;
+line-height:normal;layout-grid-mode:both'><span lang=EN-US style='font-family:
+"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:10.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoTocHeading align=center style='margin-left:27.9pt;text-align:center;
+text-indent:0cm'><span style='font-family:宋体'>目录</span></p>
+
+<p class=MsoToc1 style='margin-left:21.0pt'><span
+lang=EN-US><a href="#_Toc434588564">1<span style='font-size:10.5pt;line-height:
+120%;color:windowtext;font-weight:normal;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>前</span></span>&nbsp;
+<span lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>言</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc1 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588565">2<span style='font-size:10.5pt;line-height:120%;
+color:windowtext;font-weight:normal;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>准备工作</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588566">2.1<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>系统安装与卸载</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588567">2.1.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>安装过程</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588568">2.1.1.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Ubuntu<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>环境系统安装过程</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588569">2.1.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>运行过程</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588570">2.1.3<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>卸载过程</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc1 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588571">3<span style='font-size:10.5pt;line-height:120%;
+color:windowtext;font-weight:normal;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>管理天盾</span></span>Anti-DDoS<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>系统</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588572">3.1<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>登录和注销天盾</span></span>Anti-DDoS<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>系统</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588573">3.1.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>登录系统</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588574">3.1.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>退出系统</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588575">3.2<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>平台概况</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588576">3.2.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>速率正常与异常次数</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588577">3.2.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>检测次数占比</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588578">3.2.3<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>协议攻击占比</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588579">3.2.4<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>最近攻击防御事件</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588580">3.2.5<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>攻击详细列表</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588581">3.3<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>策略管理</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588582">3.3.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>控制器菜单（</span></span>Controller<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588583">3.3.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>网络节点（</span></span>Netnode<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588584">3.3.3<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>保护对象（</span></span>PO<span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588585">3.4<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>系统设置</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588586">3.4.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>用户管理</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588587">3.4.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>备份与恢复</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588588">3.5<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>流量</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588589">3.5.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>历史流量</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588590">3.5.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>流量基线</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588591">3.6<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>日志</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588592">3.6.1<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>系统日志</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc434588593">3.6.2<span
+style='font-size:10.5pt;line-height:120%;color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>操作日志</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588594">3.7<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>中英文切换</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></span></p>
+
+<p class=MsoToc2 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588595">3.8<span style='line-height:120%;font-variant:normal !important;
+color:windowtext;text-decoration:none'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-family:"微软雅黑",sans-serif'><span lang=EN-US>帮助</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></span></p>
+
+<p class=MsoToc1 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588596">APPENDIX1 <span lang=EN-US style='font-family:"微软雅黑",sans-serif'><span
+lang=EN-US>专业术语表</span></span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></span></p>
+
+<p class=MsoToc1 style='margin-left:21.0pt'><span lang=EN-US><a
+href="#_Toc434588597">APPENDIX2 <span lang=EN-US style='font-family:"微软雅黑",sans-serif'><span
+lang=EN-US>常见问题解答</span></span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:10.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:10.0pt'><span lang=EN-US
+style='font-family:"Courier New"'>&nbsp;</span></p>
+
+</div>
+
+<span lang=EN-US style='font-size:10.5pt;line-height:120%;font-family:"Courier New"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2 style='layout-grid:15.6pt 0pt'>
+
+<h1 style='margin-left:0cm'><a name="_Toc434588564"><span lang=EN-US>1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>前</span><span lang=EN-US>&nbsp; </span></a><span
+style='font-family:幼圆'>言</span></h1>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>目前，网络安全问题日趋严重，尤其是<span
+lang=EN-US>DDoS</span>（<span lang=EN-US>Distributed Denial of Service</span>，分布式拒绝服务）攻击成本的不断下降，使得这类攻击成为目前最为普遍的网络攻击手段，给电子商务、互联网金融等依赖网络实现业务发展的行业带来了极大危害。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>随着<span
+lang=EN-US>SDN</span>网络技术的不断发展，针对<span lang=EN-US>SDN</span>网络的<span
+lang=EN-US>DDoS</span>攻击将会增加，并将会愈演愈烈，为了更好的应对日益严重的<span lang=EN-US>DoS/DDoS</span>攻击问题，加强<span
+lang=EN-US>SDN</span>网络的安全防护，减少损失，中国电子科技集团第三十二研究所利用<span lang=EN-US>SDN</span>技术自身的特性开发出了一款可应用于<span
+lang=EN-US>SDN</span>网络环境中防止<span lang=EN-US>DDoS</span>攻击应用软件，形成一款基于<span
+lang=EN-US>SDN</span>网络环境的防<span lang=EN-US>DDoS</span>攻击的应用软件产品。关于天盾<span
+lang=EN-US>Anti-DDoS</span>系统的更多信息，请访问中国电子科技集团第三十二研究所官方网站<span lang=EN-US><a
+href="http://www.cetc-ss.com"><span style='color:windowtext;text-decoration:
+none'>http:// http://www.ecict.com.cn/</span></a></span>。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>建议用户在使用<span
+lang=EN-US>Anti-DDoS</span>应用之前，仔细阅读本手册。通过本手册，用户可以熟悉天盾<span lang=EN-US>Anti-DDoS</span>系统的安装与卸载方法，并了解如何有效使用<span
+lang=EN-US>Anti-DDoS</span>应用保护<span lang=EN-US>SDN</span>网络免受<span lang=EN-US>DDoS</span>攻击。
+</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>关于本手册中特殊标记及缩略语的说明：
+</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>本手册语言为中文，但一些专业术语可能会使用英文缩写。关于这些缩写的详细解释可参见天盾<span
+lang=EN-US>Anti-DDoS</span>系统管理指南<span lang=EN-US> APPENDIX1 </span>专业术语表 </p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>本手册中“单击”或者“点击<span
+lang=EN-US>”</span>均指单击鼠标左键 </p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+<b><span lang=EN-US style='font-size:10.5pt;font-family:"Calibri",sans-serif;
+color:#006CB6'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<div class=WordSection3 style='layout-grid:15.6pt 0pt'>
+
+<h1 style='margin-left:0cm'><a name="_Toc434588565"></a><a name="_Toc434585554"></a><a
+name="_Toc434571040"><span lang=EN-US>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>准备工作</span></a></h1>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>我们为用户提供了<span
+lang=EN-US>Ubuntu</span>以及<span lang=EN-US>Centos</span>两种操作系统下天盾<span
+lang=EN-US>Anti-DDoS</span>系统的安装包。在<span lang=EN-US>Ubuntu</span>系统上安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统需要使用<span lang=EN-US>Ubuntu 14.4</span>及以上版本，在<span
+lang=EN-US>Centos</span>系统上安装的话需要使用<span lang=EN-US>Centos 7</span>及以上版本。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>用户在安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统之前需要确认以下几个问题：</p>
+
+<p class=MsoListParagraph style='margin-left:0cm'><span lang=EN-US>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>明确当前使用的是何种操作系统；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm'><span lang=EN-US>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>操作系统相应的版本号是否满足安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统所需的最低版本。如果使用的操作系统版本过低，请先将操作系统升级到安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统所需的最低版本号，然后使用相应的安装包进行安装操作。</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>确认网络是否连通，如果当前主机能够访问<span lang=EN-US>Internet</span>，在安装的过程中根据提示在线安装<span
+lang=EN-US>Docker</span>容器；如果当前主机不能访问<span lang=EN-US>Internet</span>，用户需要手动安装<span
+lang=EN-US>Docker 1.8</span>及以上版本；<a name="_Toc434588566"></a><a
+name="_Toc434585555"></a><a name="_Toc434571041"></a></p>
+
+<h2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;margin-left:
+30.9pt'><span lang=EN-US>2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>系统安装与卸载</span></h2>
+
+<h3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:0cm;margin-left:
+21.1pt;margin-bottom:.0001pt;text-indent:-21.1pt'><a name="_Toc434588567"></a><a
+name="_Toc434585556"></a><a name="_Toc434571042"><span lang=EN-US>2.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>安装过程</span></a></h3>
+
+<h4 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+0cm'><a name="_Toc434588568"><span lang=EN-US>2.1.1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Ubuntu</span></a><span style='font-family:幼圆'>环境系统安装过程</span></h4>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>我们为<span
+lang=EN-US>Ubuntu</span>操作系统提供了一个<span lang=EN-US>deb</span>的安装压缩包，将本系统所需要的相关软件全部打包在该<span
+lang=EN-US>deb</span>压缩包中。安装本系统时，只需要将该<span lang=EN-US>deb</span>包放到设备上的任何目录下，然后解压即可，在应用安装完成之后如果用户没有安装<span
+lang=EN-US>Docker</span>，那么需要根据提示，输入相应的命令执行在线安装<span lang=EN-US>Docker</span>容器。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>天盾<span
+lang=EN-US>Anti-DDoS</span>系统安装主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>将<span lang=EN-US>deb</span>安装包（<span lang=EN-US>antiddos_1.0.deb</span>）拷贝到设备中<span
+lang=EN-US>/usr/local</span>目录下；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>在<span lang=EN-US>/usr/local</span>目录下执行<span lang=EN-US>dpkg -i
+antiddos_1.0.deb</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>出现如图 <span lang=EN-US>2</span><span lang=EN-US>&#8209;1</span>所示的信息即表示该系统安装成功；</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=334 height=129 id="图片 513" src="user-guide.files/image001.jpg"
+alt=ubuntu安装过程图><img border=0 width=215 height=44 id="图片 512"
+src="user-guide.files/image002.jpg" alt=Docker安装过程图></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref406598466"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>2</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>1</span><span lang=EN-US> </span><span style='line-height:120%;
+font-family:宋体'>天盾</span><span lang=EN-US style='line-height:120%;font-family:
+"Times New Roman",serif'>Anti-DDoS</span><span style='line-height:120%;
+font-family:宋体'>系统安装成功</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>2.1.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Centos</span><span style='font-family:幼圆'>环境系统安装过程</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>我们为<span
+lang=EN-US>Centos</span>操作系统提供了一个<span lang=EN-US>rpm</span>的安装压缩包，将本系统所需要的相关软件全部打包在该<span
+lang=EN-US>rpm</span>压缩包中。安装本系统时，只需要将该<span lang=EN-US>rpm</span>包放到设备上的任何目录下，然后解压即可。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>天盾<span
+lang=EN-US>Anti-DDoS</span>系统安装主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>将<span lang=EN-US>rpm</span>安装包（<span lang=EN-US>antiddos-1.0-1.noarch.rpm</span>）拷贝到设备中<span
+lang=EN-US>/usr/local</span>目录下；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>在<span lang=EN-US>/usr/local</span>目录下执行<span lang=EN-US>rpm -ivh
+antiddos-1.0-1.noarch.rpm</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>出现如图 <span lang=EN-US>2&#8209;2</span>所示的信息即表示该系统安装成功；</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal'><span lang=EN-US style='font-family:
+宋体'><img border=0 width=491 height=149 src="user-guide.files/image003.jpg"></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433899497"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>2</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>2</span><span lang=EN-US> </span><span style='line-height:120%;
+font-family:宋体'>天盾</span><span lang=EN-US style='line-height:120%;font-family:
+"Times New Roman",serif'>Anti-DDoS</span><span style='line-height:120%;
+font-family:宋体'>系统安装成功</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588569"></a><a name="_Toc434585557"></a><a
+name="_Toc434571043"><span lang=EN-US>2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>运行过程</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>在<span
+lang=EN-US>Ubuntu</span>系统以及<span lang=EN-US>Centos</span>系统下本系统运行过程都是相同的，所以本文不再区分系统运行过程。在默认情况下，天盾<span
+lang=EN-US>Anti-DDoS</span>系统在安装完成后会自动运行。如果需要手工暂停本系统，请执行：<span lang=EN-US>/etc/init.d/antiddos
+stop</span>命令暂停；如果要手工启动本系统，请执行<span lang=EN-US>/etc/init.d/antiddos start</span>命令启动。</p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588570"></a><a name="_Toc434585558"></a><a
+name="_Toc434571044"><span lang=EN-US>2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>卸载过程</span></a></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><span lang=EN-US>2.3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Ubuntu</span><span style='font-family:幼圆'>环境系统卸载过程</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果用户不想再使用天盾<span
+lang=EN-US>Anti-DDoS</span>系统，那么请使用命令：<span lang=EN-US>dpkg -r antiddos</span>将本系统相关软件全部卸载，具体卸载操作如图
+<span lang=EN-US>2</span><span lang=EN-US>&#8209;3</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=519 height=183 id="图片 446" src="user-guide.files/image004.jpg"
+alt=ubuntu卸载过程图></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434500903"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>2</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>3</span><span lang=EN-US style='line-height:120%;font-family:"Times New Roman",serif'>
+Ubuntu</span><span style='line-height:120%;font-family:宋体'>环境天盾</span><span
+lang=EN-US style='line-height:120%;font-family:"Times New Roman",serif'>Anti-DDoS</span><span
+style='line-height:120%;font-family:宋体'>系统卸载操作</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><span lang=EN-US>2.3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Centos</span><span style='font-family:幼圆'>环境系统卸载过程</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果用户不想再使用天盾<span
+lang=EN-US>Anti-DDoS</span>系统，那么请使用命令：<span lang=EN-US>rpm -e antiddos</span>将本系统相关软件全部卸载，具体卸载操作如图
+<span lang=EN-US>2</span><span lang=EN-US>&#8209;4</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=512 height=36
+src="user-guide.files/image005.png"></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433902539"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>2</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>4</span><span lang=EN-US> </span><span lang=EN-US style='line-height:
+120%;font-family:"Times New Roman",serif'>Centos</span><span style='line-height:
+120%;font-family:宋体'>环境天盾</span><span lang=EN-US style='line-height:120%;
+font-family:"Times New Roman",serif'>Anti-DDoS</span><span style='line-height:
+120%;font-family:宋体'>系统卸载操作</span><span style='line-height:120%;font-family:
+"Times New Roman",serif'> </span></p>
+
+</div>
+
+<b><span lang=EN-US style='font-size:14.0pt;font-family:"Calibri",sans-serif;
+color:#006CB6'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<div class=WordSection4 style='layout-grid:15.6pt 0pt'>
+
+<p class=12 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:21.55pt'><a name="_Toc434588571"></a><a name="_Toc434585559"></a><a
+name="_Toc434571045"><span lang=EN-US>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>管理天盾</span><span lang=EN-US>Anti-DDoS</span></a><span
+style='font-family:幼圆'>系统</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>本章介绍通过<span
+lang=EN-US>web</span>方式登录天盾<span lang=EN-US>Anti-DDoS</span>系统的方法以及天盾<span
+lang=EN-US>Anti-DDoS</span>系统的管理菜单。主要内容有：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>登录和注销系统：如何登录与注销天盾<span
+lang=EN-US>Anti-DDoS</span>系统；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>天盾<span lang=EN-US>Anti-DDoS</span>系统的管理菜单：了解天盾<span
+lang=EN-US>Anti-DDoS</span>系统所具有的功能项</p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588572"></a><a name="_Toc434585560"></a><a
+name="_Toc434571046"><span lang=EN-US>3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>登录和注销天盾</span><span lang=EN-US>Anti-DDoS</span></a><span
+style='font-family:幼圆'>系统</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>建议用户使用<span
+lang=EN-US>Internet Explorer 9.0</span>及以上版本、<span lang=EN-US>Google Chrome</span>、<span
+lang=EN-US>Firefox</span>等浏览器。</p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588573"></a><a name="_Toc434585561"></a><a
+name="_Toc434571047"><span lang=EN-US>3.1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>登录系统</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>假设安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统的电脑<span lang=EN-US>IP</span>地址为：<span lang=EN-US>10.111.121.47</span>，那么在浏览器地址栏中输入<span
+lang=EN-US>10.111.121.47</span>，即可访问本系统。如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;1</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=548 height=263 id="图片 439"
+src="user-guide.files/image006.jpg" alt=访问系统登录界面></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434499994"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>1</span><a name="_Ref406166314"><span lang=EN-US> </span></a><span
+style='font-family:黑体'>登录系统界面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>在用户名栏中输入用户名（可以使用默认的用户名：<span lang=EN-US>admin</span>）；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>在密码栏中输入密码（默认的密码：<span lang=EN-US>admin</span>）；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>如果勾选“记住我”复选框，那么下次登录的时候将不需要再次输入用户名和密码； </p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>单击<span lang=EN-US>“</span>登录<span lang=EN-US>”</span>，如果用户名、密码正确即可登录管理页面；如果用户名或者密码或者用户名密码都不正确，那么在密码输入框下方将提示错误信息。如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;2</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=518 height=288 id="图片 438" src="user-guide.files/image007.jpg"
+alt=用户名错误提示界面></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433634497"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>2</span><span lang=EN-US> </span><span style='font-family:黑体'>用户名或密码错误提示界面</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588574"></a><a name="_Toc434585562"></a><a
+name="_Toc434571048"><span lang=EN-US>3.1.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>退出系统</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要退出当前系统，单击屏幕右上方的用户名处，然后在显示的下来菜单项中点击“注销”菜单项即可退出当前系统，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;3</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=475 height=217 id="图片 2" src="user-guide.files/image008.jpg"></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434498893"><span style='font-family:黑体'>图</span>
+<span lang=EN-US>3&#8209;</span></a><span
+lang=EN-US>3</span><span lang=EN-US> </span><span style='font-family:黑体'>注销系统</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588575"></a><a name="_Toc434585563"></a><a
+name="_Toc434571049"><span lang=EN-US>3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>平台概况</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>本节内容主要描述的用户在使用天盾<span
+lang=EN-US>Anti-DDoS</span>系统过程受到各类攻击的一些基本情况，采用图形和列表的形式来展示用户在使用本系统的过程中受到的一些攻击情况以及本系统采取的措施。图像直观的展现了用户在使用本系统过程中受到的攻击的总体情况，列表详细的列出了用户受到的具体攻击情况。本节主要包括了速率正常与异常次数、检测次数占比、协议攻击占比、最近攻击防御事件、攻击详细列表等。</p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588576"></a><a name="_Toc434585564"></a><a
+name="_Toc434571050"><span lang=EN-US>3.2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>速率正常与异常次数</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>该部分主要展示了当前受保护对象速率正常与异常次数，受到攻击的具体次数以及<span
+lang=EN-US>Anti-DDoS</span>应用启动攻击防御的具体次数等总体情况，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;4</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=469 height=45 id="图片 436" src="user-guide.files/image009.jpg"
+alt=速率正常与异常次数></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433981630"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>4</span><span lang=EN-US> </span><span style='font-family:黑体'>速率正常与异常次数</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:30.9pt'><a name="_Toc434588577"></a><a name="_Toc434585565"></a><a
+name="_Toc434571051"><span lang=EN-US>3.2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>检测次数占比</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>该部分主要展示的是正常速率次数、异常速率次数、攻击次数各自占总的检测次数的比例情况，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;5</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=494 height=273 id="图片 428" src="user-guide.files/image010.jpg"
+alt=检测次数占比></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433981686"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>5</span><span lang=EN-US> </span><span style='font-family:黑体'>检测次数占比</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:30.9pt'><a name="_Toc434588578"></a><a name="_Toc434585566"></a><a
+name="_Toc434571052"><span lang=EN-US>3.2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>协议攻击占比</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>本部分展示了受保护对象在使用天盾<span
+lang=EN-US>Anti-DDoS</span>系统之后受到的<span lang=EN-US>TCP</span>、<span lang=EN-US>UDP</span>、<span
+lang=EN-US>ICMP</span>以及其他<span lang=EN-US>IP</span>协议攻击次数在总的攻击次数中的比例，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;6</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=495 height=306 id="图片 425" src="user-guide.files/image011.jpg"
+alt=协议攻击占比></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433981869"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>6</span><span lang=EN-US> </span><span style='font-family:黑体'>协议攻击占比</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:30.9pt'><a name="_Toc434588579"></a><a name="_Toc434585567"></a><a
+name="_Toc434571053"><span lang=EN-US>3.2.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>最近攻击防御事件</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>最近攻击防御事件部分主要列出了天盾<span
+lang=EN-US>Anti-DDoS</span>系统检测到受保护对象是否受到攻击、启动防御、停止防御等一系列措施等事件，受到攻击以及采取措施的时间、攻击的对象、攻击流量使用的协议方式、攻击的速率以及系统检测到攻击或者攻击取消时采取何种防御措施，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;7</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=554 height=242 id="图片 404" src="user-guide.files/image012.jpg"
+alt=最近攻击防御事件></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433982477"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>7</span><span lang=EN-US> </span><span style='font-family:黑体'>最近攻击防御事件</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:30.9pt'><a name="_Toc434588580"></a><a name="_Toc434585568"></a><a
+name="_Toc434571054"><span lang=EN-US>3.2.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>攻击详细列表</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>攻击详细列表向用户详细描述了受到攻击的对象、保护对象所使用的协议方式、用户在使用天盾<span
+lang=EN-US>Anti-DDoS</span>系统之后流量速率正常的次数、流量速率异常的次数、受保护对象受到的攻击次数、天盾<span
+lang=EN-US>Anti-DDoS</span>系统启动防御的次数以及系统在检测到攻击消除之后启动防御恢复的次数，具体情况如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;8</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=527 height=144 id="图片 345" src="user-guide.files/image013.jpg"
+alt=攻击详细列表></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433984564"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>8</span><span lang=EN-US> </span><span style='font-family:黑体'>攻击详细列表</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588581"></a><a name="_Toc434585569"></a><a
+name="_Toc434571055"><span lang=EN-US>3.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>策略管理</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>天盾<span
+lang=EN-US>Anti-DDoS</span>系统策略管理菜单包含：控制器、网络节点、保护对象三个菜单项。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>控制器（<span lang=EN-US>Controller</span>）：配置<span
+lang=EN-US>Anti-DDoS</span>应用所需的控制器的相关信息；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>网络节点（<span
+lang=EN-US>Netnode</span>）：配置<span lang=EN-US>Anti-DDoS</span>应用中所需的交换机（<span
+lang=EN-US>switch</span>）的相关信息；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>保护对象（<span
+lang=EN-US>PO</span>）：配置<span lang=EN-US>Anti-DDoS</span>应用需要保护的网络或者单个对象。</p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588582"></a><a name="_Toc434585570"></a><a
+name="_Toc434571056"><span lang=EN-US>3.3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>控制器菜单（</span><span lang=EN-US>Controller</span></a><span
+style='font-family:幼圆'>）</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>点击控制器菜单项将显示当前已经配置的控制器信息，在控制器显示页面还可以通过相应的功能键按钮实现添加、编辑、删除控制器相关配置信息等功能。控制器显示页面如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;9</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=551 height=101 id="图片 344"
+src="user-guide.files/image014.jpg" alt=控制器显示></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433635209"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>9</span><span lang=EN-US> </span><span style='font-size:12.0pt;
+line-height:120%;font-family:黑体'>控制器显示页面</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>添加控制器</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要添加新的控制器信息，可以点击控制器显示页面上方的“添加<span
+lang=EN-US>”</span>按钮来增加新的控制器配置信息，添加页面如图 <span lang=EN-US>3</span><span
+lang=EN-US>&#8209;10</span>所示。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>配置页面中标有红色星号的项为必填项，如果必填项没有填写，当光标移开该必填项时将提示不能为空的提示，或者用户输入的信息有误时也会提示用户输入有误，在点击保存的时候如果检测到有必填项为空或者有误时也会提示错误，要求用户填写或者更改对应的配置。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=430 height=480 id="图片 343" src="user-guide.files/image015.jpg" alt=控制器添加></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433635410"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>10</span><span lang=EN-US> </span><span style='font-family:黑体'>添加控制器页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>添加控制器信息主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选择控制器类型，默认为<span lang=EN-US>OPENDAYLIGHT-HELIUM</span>，可以通过控制器类型后面的下拉列表框选择所需的控制器类型；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入控制器所在设备的<span lang=EN-US>IP</span>地址；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入接入控制器所使用的端口号；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入登录控制器所在设备的用户名；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入登录控制器所在设备的密码；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入检测时间间隔，默认值为<span lang=EN-US>60</span>秒；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入异常次数阀值，如果当前流量值超出流量学习所获得的流量基线值的次数超过配置的阀值时判定为攻击，默认值为<span
+lang=EN-US>3</span>次；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入异常流量偏差百分比，如果当前流量超出流量学习所获得的流量基线值的百分之多少的时候判定为流量异常，默认值为<span
+lang=EN-US>50%</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入攻击恢复次数阀值，如果当前流量小于流量学习所获得的流量基线值的次数超过配置的阀值时判定为攻击消除，需要恢复到正常状态，默认值为<span
+lang=EN-US>3</span>次；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>单击“保存<span lang=EN-US>”</span>按钮保存新增的配置到数据库中，单击“返回<span
+lang=EN-US>”</span>按钮将返回到控制器显示页面。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>编辑控制器</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果需要对已经配置好的控制器进行修改，可以在显示页面上找到对应需要修改的控制器，然后点击末端的编辑功能键即可进入到编辑状态，根据需要修改相应的字段即可，编辑完成之后点击保存即可将修改后的配置保存到数据库中。编辑页面将显示之前已经配置的配置信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;11</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=419 height=440 id="图片 342" src="user-guide.files/image016.jpg" alt=控制器编辑></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433636957"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>11</span><span lang=EN-US> </span><span style='font-family:黑体'>编辑控制器页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>编辑控制器主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>找到需要修改的控制器一栏，点击末尾的编辑功能键；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>进入到编辑页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>根据需要修改相应的字段，其中标有红色星号的字段为必填项；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击<span lang=EN-US>&quot;</span>保存<span lang=EN-US>”</span>按钮保存修改后的配置信息，然后返回到控制器显示页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“返回<span lang=EN-US>”</span>按钮将不会保存已经修改的配置信息，然后返回到控制器显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.1.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除控制器</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除某一条控制器配置，有两种实现方法：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选中该条控制器配置信息前的复选框，然后通过上方的<span lang=EN-US>“</span>删除<span
+lang=EN-US>”</span>按钮，删除对应的控制器配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>通过该条控制器配置栏末端的删除功能键删除该条控制器配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除其中多条控制器配置信息时，同时选中需要删除的控制器配置前的复选框，然后点击上方的<span
+lang=EN-US>“</span>删除<span lang=EN-US>”</span>按钮，将从数据库中删除选中的控制器配置信息；除此之外，还可以通过逐条删除的方式删除控制器配置信息。显示页面将不会显示已经删除的控制器配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除全部的控制器配置信息，那么选中控制器显示页面左上角的复选框，那么将选中所有的控制器配置信息，然后点击上方的<span
+lang=EN-US>“</span>删除<span lang=EN-US>”</span>按钮，将删除数据库中所有的控制器配置信息，显示页面也将不会显示已经删除的控制器配置信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;12</span>所示</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=538 height=109 id="图片 341" src="user-guide.files/image017.jpg"
+alt=控制器全部删除></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434479468"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>12</span><span lang=EN-US> </span><span style='font-family:黑体'>控制全部删除选择界面</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588583"></a><a name="_Toc434585571"></a><a
+name="_Toc434571057"><span lang=EN-US>3.3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>网络节点（</span><span lang=EN-US>Netnode</span></a><span
+style='font-family:幼圆'>）</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>网络节点主要是配置网络中交换机的相关配置、配置该交换机与哪个控制器（<span
+lang=EN-US>Controller</span>）相连，以及在配置保护对象（<span lang=EN-US>PO</span>）的时候提供关联的交换机信息。点击网络节点菜单项将显示已经配置好的网络节点配置信息。在网络节点显示页面还可以通过相应的功能按钮实现添加新的、编辑、删除已存在的网络节点相关配置信息等功能。网络节点显示页面如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;13</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=537 height=142 id="图片 340" src="user-guide.files/image018.jpg"
+alt=网络节点显示></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433641592"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>13</span><span lang=EN-US> </span><span style='font-family:黑体'>网络节点显示页面</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>添加网络节点</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要添加新的网络节点信息，点击网络节点显示页面上方的“添加<span
+lang=EN-US>”</span>按钮来增加新的网络节点配置信息，添加页面如图 <span lang=EN-US>3</span><span
+lang=EN-US>&#8209;14</span>所示。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>配置页面中标有红色星号的项为必填项，如果必填项没有填写，当光标移开该必填项时将提示不能为空的提示，或者用户输入的信息有误时也会提示用户输入有误，在点击保存的时候如果检测到有必填项为空或者有误时也会提示错误，要求用户填写或者更改对应的配置。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=525 height=256 id="图片 339" src="user-guide.files/image019.jpg"
+alt=网络节点添加></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433641801"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>14</span><span lang=EN-US> </span><span style='font-family:黑体'>网络节点添加页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>添加网络节点信息主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入交换机名字，可以是任意的字符与数字，但是不能与已有的交换机名字相同；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入交换机<span lang=EN-US>ID</span>号，该值需要在交换机上查询，不能随意输入；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选择控制器<span lang=EN-US>ID</span>，通过下拉列表框选择该交换机需要连接的控制器<span
+lang=EN-US>ID</span>值，控制器<span lang=EN-US>ID</span>的值是前面已经配置好的，所有已经配置的控制器都将显示在下拉列表框中，根据实际需求选择控制器<span
+lang=EN-US>ID</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“保存<span lang=EN-US>”</span>按钮将新增的配置信息保存到数据库中，然后返回到网络节点显示页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“返回<span lang=EN-US>”</span>按钮将不会保存已经输入的配置信息，然后返回到网络节点显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>编辑网络节点</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果需要对已经存在的网络节点进行修改，可以在显示页面上找到需要修改的网络节点配置信息，然后点击末端的编辑功能键即可进入到编辑状态，根据需要修改相应的字段即可，修改完成之后点击保存按钮将修改之后的配置信息更新到数据库中。编辑页面将显示之前已经配置的信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;15</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=502 height=259 id="图片 338" src="user-guide.files/image020.jpg"
+alt=网络节点编辑></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433642173"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>15</span><span lang=EN-US> </span><span style='font-family:黑体'>网络节点编辑页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>编辑网络节点主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>找到需要修改的网络节点一栏，点击末尾的编辑功能键；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>进入到编辑页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>根据需要修改相应的字段，其中标有红色星号的字段为必填项；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“保存”按钮保存修改后的配置信息；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“返回<span lang=EN-US>”</span>按钮将不会保存修改的配置信息，然后返回到网络节点显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除网络节点</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除某一条网络节点配置，有两种实现方法：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选中该条网络节点配置信息前的复选框，然后通过上方的“删除”按钮，删除对应的网络节点配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>通过该条网络节点配置栏末端的删除功能键删除该条网络节点配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除其中多条网络节点配置信息时，同时选中需要删除的网络节点配置前的复选框，然后点击上方的“删除”按钮，将从数据库中删除选中的网络节点配置信息；除此之外，还可以通过逐条删除的方式删除网络节点配置信息。显示页面将不会显示已经删除的网络节点配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除全部的网络节点配置信息，那么选中网络节点显示页面左上角的复选框，那么将选中所有的网络节点配置信息，然后点击上方的“删除”按钮，将删除数据库中所有的网络节点配置信息，显示页面也将不会显示已经删除的网络节点配置信息。删除选择如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;16</span>所示：</p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=570 height=165 id="图片 337" src="user-guide.files/image021.jpg"
+alt=网络节点全部删除></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433702365"></a><a name="_Ref433702384"><span
+style='font-family:黑体'>图</span> </a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>16</span><span lang=EN-US> </span><span style='font-family:黑体'>网络节点全部删除</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588584"></a><a name="_Toc434585572"></a><a
+name="_Toc434571058"><span lang=EN-US>3.3.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>保护对象（</span><span lang=EN-US>PO</span></a><span
+style='font-family:幼圆'>）</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>保护对象（<span
+lang=EN-US>PO</span>），主要配置保护对象受到某种流量攻击时应该使用何种策略进行处理。在保护对象显示页面通过相应的功能按钮还可以实现添加新的、编辑及删除已存在的保护对象的相关配置信息等功能。保护对象显示页面如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;17</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US style='color:red'><img
+border=0 width=578 height=126 id="图片 336" src="user-guide.files/image022.jpg"
+alt=保护对象显示></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref406401756"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>17</span><span lang=EN-US> </span><span style='font-family:黑体'>保护对象显示页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>添加保护对象</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要添加新的保护对象信息，可以点击保护对象显示页面上方的“添加<span
+lang=EN-US>”</span>按钮来增加新的保护对象配置信息，添加页面如图 <span lang=EN-US>3</span><span
+lang=EN-US>&#8209;18</span>所示。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>配置页面中标有红色星号的项为必填项，如果必填项没有填写，当光标移开该必填项时将提示不能为空的提示，或者用户输入的信息有误时也会提示用户输入有误，在点击保存的时候如果检测到有必填项为空或者有误时也会提示错误，要求用户填写或者更改对应的配置。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=324 height=404 id="图片 335" src="user-guide.files/image023.jpg"
+alt=保护对象添加></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433703339"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>18</span><span lang=EN-US> </span><span style='font-family:黑体'>保护对象添加页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>保护对象添加主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入保护对象的名称：为新增的保护对象取一个名字，不能与已有的名字相同；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输入端口：要保护对象流量流入的端口号；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>输出端口：通过配置的输入端口进入到保护对象的流量将通过该端口输出；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>保护对象：配置需要保护的具体对象或者一个网络，如：<span lang=EN-US>192.168.1.1/32</span>或者<span
+lang=EN-US>192.168.0.0/16;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>防御类型：通过下来列表框选择防御的类型，当检测到攻击的时候将按照该类型进行防御，默认值是进行限速操作，除此之外可以根据需要选择进行引流；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>引流端口：当防御类型选择为引流时，需要一个引流端口，通过该端口将攻击流量引向其他地方；如果选择限速，则不需要配置该字段；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>所属交换机：通过下拉列表框选择该保护对象相关联的交换机（<span lang=EN-US>Netnode</span>），该下拉列表框中包含了所有已经配置的交换机名称；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>协议：选择需要保护的流量所使用的协议类型，可以是<span lang=EN-US>TCP</span>、<span
+lang=EN-US>UDP</span>、<span lang=EN-US>ICMP</span>或者任意类型中的一种，也可以是其中的某几种类型，需要保护哪种协议的流量就选中对应协议前的复选框；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>设置流量阀值：该阀值可以通过手动设置也可通过自动学习获取，如果选择自动学习流量阀值，那么就选中其对应的单选框；如果选择固定流量阀值那么就需要设置对应的<span
+lang=EN-US>pps</span>以及<span lang=EN-US>kbps</span>值，二者只能任选其一；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>点击“保存”按钮将新增的配置信息保存到数据库中，然后返回到保护对象显示页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>点击“返回<span lang=EN-US>”</span>按钮将不会保存已经输入的配置信息，然后返回到保护对象显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>编辑保护对象</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果需要对已经配置好的保护对象进行修改，可以在显示页面上找到对应需要修改的保护对象，然后点击末端的编辑功能键即可进入到编辑状态，根据需要修改相应的字段即可，但是已经关联的交换机将不能进行修改，如果要修改关联的交换机只有通过新增的方式添加，不能通过编辑方式来配置。编辑页面将显示之前已经配置的配置信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;19</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=447 height=573 id="图片 334" src="user-guide.files/image024.jpg"
+alt=保护对象编辑></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433704301"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>19</span><span lang=EN-US> </span><span style='font-family:黑体'>保护对象编辑页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>编辑保护对象信息主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>找到需要修改的保护对象一栏，点击末尾的编辑功能键；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>进入到编辑页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>根据需要修改相应的字段，但是关联的交换机信息不能修改；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“保存”按钮保存修改后的配置信息；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击“返回”按钮将不会保存修改的配置信息，然后返回到保护对象显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.3.3.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除保护对象</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除某一条保护对象配置，有两种实现方法：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选中该条保护对象配置信息前的复选框，然后通过上方的“删除”按钮，删除对应的保护对象配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>通过该条保护对象配置栏末端的删除功能键删除该条保护对象配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除其中多条保护对象配置信息时，同时选中需要删除的保护对象前的复选框，然后点击上方的“删除”按钮，将从数据库中删除选中的保护对象配置信息，显示页面将不会显示已经删除的保护对象配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除全部的保护对象配置信息，那么选中保护对象显示页面左上角的复选框，那么将选中所有的保护对象配置信息，然后点击上方的“删除”按钮，将删除数据库中所有的保护对象点配置信息，显示页面也将不会显示已经删除的保护对象配置信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;20</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=556 height=140 id="图片 316" src="user-guide.files/image025.jpg"
+alt=保护对象全部删除></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434479647"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>20</span><span lang=EN-US> </span><span style='font-family:黑体'>保护对象全部删除</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588585"></a><a name="_Toc434585573"></a><a
+name="_Toc434571059"><span lang=EN-US>3.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>系统设置</span></a></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588586"></a><a name="_Toc434585574"></a><a
+name="_Toc434571060"><span lang=EN-US>3.4.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>用户管理</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>天盾<span
+lang=EN-US>Anti-DDoS</span>系统允许多个用户同时登陆系统，并可以根据不同的角色划分不同的权限。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>选择“系统设置<span
+lang=EN-US>”-&gt;</span>“用户管理<span lang=EN-US>”</span>，进入用户管理显示页面，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;21</span>所示。页面中将系统中已配置的不同角色的用户信息都显示在页面中，包括用户名、昵称、创建时间、相应的角色信息，并可以通过操作栏中的具体操作对指定的管理员进行编辑与删除操作。除此之外还可以通过最上方的添加按钮添加新的用户信息；通过“删除”按钮删除一个或多个用户信息。使用角色为<span
+lang=EN-US>ADMIN</span>的用户名登陆可以添加新的角色为<span lang=EN-US>ADMIN</span>或者<span
+lang=EN-US>USER</span>的用户信息，但是如果使用角色为<span lang=EN-US>USER</span>的用户名登陆系统则只能查看本系统的部分功能且不能添加新的其他用户信息，新添加的用户使用默认的密码：<span
+lang=EN-US>admin</span>。如果要更改用户的默认密码，同使用对应的用户名登陆系统，然后通过系统右上角显示的当前用户名下得“用户属性设置<span
+lang=EN-US>”</span>来更改当前用户的一些信息，如图 <span lang=EN-US>3</span><span lang=EN-US>&#8209;22</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=556 height=132 id="图片 315"
+src="user-guide.files/image026.jpg" alt=用户设置显示页面></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433720580"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>21</span><span lang=EN-US> </span><span style='font-family:黑体'>用户设置显示页面</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=562 height=173 id="图片 314" src="user-guide.files/image027.jpg"
+alt=用户属性设置></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433720653"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>22</span><span lang=EN-US> </span><span style='font-family:黑体'>用户属性设置</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>添加用户</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>当需要添加新的用户信息时，单击页面中的<span
+lang=EN-US>“</span>添加<span lang=EN-US>”</span>按钮，进入添加页面，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;23</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=475 height=236 id="图片 313"
+src="user-guide.files/image028.jpg" alt=添加用户信息></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref405901311"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>23</span><span lang=EN-US> </span><span style='font-family:黑体'>添加用户信息页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>添加用户信息主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>填写用户名：不能与已有的用户名相同，且不能为空；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>填写昵称：为用户填写一个昵称，不能空；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>角色：根据需求为用户设置不同的角色，当前可选的为<span lang=EN-US>ADMIN</span>与<span
+lang=EN-US>USER</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>单击<span lang=EN-US>“</span>保存<span lang=EN-US>”</span>按钮将配置信息保存到数据库中，并返回到用户信息显示页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>点击<span lang=EN-US>“</span>返回<span lang=EN-US>”</span>按钮将直接返回到用户信息显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>编辑用户</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>要修改某个用户配置信息时，在用户设置配置显示页面中找到对应用户信息记录，然后点击操作栏对应的<span
+lang=EN-US>“</span>编辑<span lang=EN-US>”</span>功能键，进入编辑页面，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;24</span>所示图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;24</span>。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=419 height=242 id="图片 312"
+src="user-guide.files/image029.jpg" alt=编辑用户信息></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref405905382"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>24</span><span lang=EN-US> </span><span style='font-family:黑体'>编辑用户信息页面</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>编辑管理员配置主要步骤：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>用户名：修改用户的用户名，但是不能与其他用户名相同；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>昵称：修改用户的昵称；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>登陆密码：如果要重置用户的登陆密码时，可点击<span lang=EN-US>“</span>重置密码<span
+lang=EN-US>”</span>按钮，将用户登陆密码重置到默认登陆密码：<span lang=EN-US>admin</span>；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>角色：根据需要修改用户的角色；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>单击“保存<span lang=EN-US>”</span>按钮完成修改，将修改后的配置信息保存到数据库中，并返回到用户管理显示页面；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>单击“返回<span lang=EN-US>”</span>按钮不保存修改后的配置信息，直接返回到用户管理显示页面；</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.1.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除用户</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除某一条用户配置信息，有两种实现方法：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>在用户管理显示页面中找到需要删除的管理员配置信息一栏然后单击该记录末端的<span lang=EN-US>“</span>删除<span
+lang=EN-US>”</span>功能键即可从数据库中删除该用户信息，显示页面将不显示已经删除的配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>选中该记录前的复选框，单击上方<span lang=EN-US>“</span>删除<span lang=EN-US>”</span>按钮即可从数据库中删除该用户信息，显示页面将不显示已经删除的配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>如果要删除其中多条用户信息时，同时选中需要删除的用户信息前的复选框，然后点击上方的“删除”按钮，将从数据库中删除选中的用户配置信息；除此之外，还可以通过逐条删除的方式删除用户配置信息。显示页面将不会显示已经删除的用户配置信息。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>默认的用户名（<span
+lang=EN-US>admin</span>）是不能被删除的，所以在显示页面中不能全部选中，然后点击“删除”按钮删除全部用户信息。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.1.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>用户属性设置</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要对当前用户属性进行修改，点击页面右上角显示当前用户名的地方将出现下来框，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;25</span>所示，然后选中用户属性设置菜单项即可进入到用户属性显示页面，点击图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;26</span>中的编辑按钮即可进入到用户属性设置页面如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;27</span>所示。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=575 height=177 id="图片 311" src="user-guide.files/image030.jpg"
+alt=用户属性设置></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433723537"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>25</span><span lang=EN-US> </span><span style='font-family:黑体'>选择用户属性设置</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=370 height=210 id="图片 310" src="user-guide.files/image031.jpg"
+alt=用户属性页面></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433723814"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>26</span><span lang=EN-US> </span><span style='font-family:黑体'>用户属性显示页面</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=351 height=257 id="图片 245" src="user-guide.files/image032.jpg"
+alt=用户属性设置编辑></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433723866"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>27</span><span lang=EN-US> </span><span style='font-family:黑体'>编辑用户属性</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:22.0pt'>编辑用户配置主要步骤：</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>用户名：不能修改用户名；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>昵称：修改当前用户的昵称；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>登陆密码：如果要修改用户的登陆密码点击<span lang=EN-US>“</span>修改密码<span lang=EN-US>”</span>按钮页面中将新增新的密码和确认密码输入框，如图
+<span lang=EN-US>3&#8209;28</span>所示；</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><span lang=EN-US><img border=0 width=385 height=298
+id="图片 190" src="user-guide.files/image033.jpg" alt=用户属性登陆密码修改></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433725849"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>28</span><span lang=EN-US> </span><span style='font-family:黑体'>用户登陆密码修改</span></p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>新密码：如果点击了“修改密码<span lang=EN-US>”</span>按钮之后会出现该输入框，在框中输入新的密码即可；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>确认密码：与上面输入的密码一致即可；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>角色：用户角色不能修改；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>完成修改后，单击“保存<span lang=EN-US>”</span>按钮，将修改后的信息保存到数据库中，并返回到用户属性显示页面；</p>
+
+<p class=MsoListParagraph style='margin-left:0cm;line-height:22.0pt'><span
+lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>单击“返回<span lang=EN-US>”</span>按钮不保存修改后的配置信息，直接返回到用户属性显示页面；</p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588587"></a><a name="_Toc434585575"></a><a
+name="_Toc434571061"><span lang=EN-US>3.4.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>备份与恢复</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>天盾<span
+lang=EN-US>Anti-DDoS</span>系统允许系统管理员对系统配置进行备份处理，将备份文件下载保存；此外，在系统出现故障或想要恢复到某一指版本的配置时，可以通过本系统导入已备份的配置文件进行恢复。具体的备份和恢复功能操作页面如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;29</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=484 height=177 id="图片 189"
+src="user-guide.files/image034.jpg" alt=备份与恢复></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref406487541"></a><a name="_Ref405906910"><span
+style='font-family:黑体'>图</span> </a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>29</span><span lang=EN-US> </span><span style='font-family:黑体'>备份与恢复页面</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>备份</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:20.2pt'><span
+style='letter-spacing:-.2pt'>如果要对系统配置信息进行备份操作，可以通过“系统设置<span lang=EN-US>”-&gt;“</span>备份恢复<span
+lang=EN-US>”</span>菜单项进入到备份与恢复页面，然后点击页面中的<span lang=EN-US>“</span>下载配置<span
+lang=EN-US>”</span>按钮，点击之后将会对系统配置信息下载到浏览器默认的下载路径下，如果下载配置信息成功，页面中将会出现<span
+lang=EN-US>“</span>备份配置信息成功！<span lang=EN-US>”</span>的消息提示，如</span><span
+style='letter-spacing:-.2pt'>图 <span lang=EN-US>3&#8209;30</span></span><span
+style='letter-spacing:-.2pt'>所示。</span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=368 height=334 id="图片 180" src="user-guide.files/image035.jpg"
+alt=下载配置成功></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433807569"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>30</span><span lang=EN-US> </span><span style='font-family:黑体'>下载配置</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.4.2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>恢复</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>当系统出现故障或系统管理员想要恢复到某一指定版本的配置时，可以通过本系统导入已备份文件进行恢复。选择“系统设置<span
+lang=EN-US>”-&gt;“</span>备份恢复<span lang=EN-US>”</span>菜单项进入到备份与恢复页面，点击页面下方的“选择文件<span
+lang=EN-US>”</span>按钮选择备份文件，然后点击“恢复<span lang=EN-US>”</span>按钮即可将系统配置信息回复到与备份文件相同，如果恢复成功页面中会出现<span
+lang=EN-US>“</span>恢复配置信息成功！<span lang=EN-US>”</span>的消息提示，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;31</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=533 height=132 id="图片 110" src="user-guide.files/image036.jpg"
+alt=恢复配置信息成功></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433807720"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>31</span><span lang=EN-US> </span><span style='font-family:黑体'>恢复配置</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588588"></a><a name="_Toc434585576"></a><a
+name="_Toc434571062"><span lang=EN-US>3.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>流量</span></a></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588589"></a><a name="_Toc434585577"></a><a
+name="_Toc434571063"><span lang=EN-US>3.5.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>历史流量</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要查看受保护对象或者网络的历史流量，那么请点击左侧的“流量”<span
+lang=EN-US>-&gt;</span>“历史流量”菜单项。在“历史流量”页面中选择要观察的保护对象以及相应的协议，然后点击“提交查询”按钮，如果查询的数据存在，那么在页面上即可展示出受保护对象以及该协议的一小时、一天、一周、月、年等相关的流量数据信息，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;32</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><span lang=EN-US><img border=0 width=545 height=173
+id="图片 509" src="user-guide.files/image037.jpg" alt=历史流量1></span></p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=546 height=243 id="图片 475" src="user-guide.files/image038.jpg" alt=历史流量2></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433810487"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>32</span><span lang=EN-US> </span><span style='font-family:黑体'>历史流量图</span></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588590"></a><a name="_Toc434585578"></a><a
+name="_Toc434571064"><span lang=EN-US>3.5.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>流量基线</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要查看受保护对象或者网络的流量基线值情况，那么请点击左侧的“流量”<span
+lang=EN-US>-&gt; </span>“流量基线”，在页面顶端选择要查看的受保护对象以及协议，然后点击“提交查询”按钮即可在页面中看到相关的流量基线图，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;33</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=533 height=212 id="图片 474" src="user-guide.files/image039.jpg" alt=流量基线图></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433811004"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>33</span><span lang=EN-US> </span><span style='font-family:黑体'>流量基线图</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>流量基线值的学习周期为一周，即<span
+lang=EN-US>7*24</span>共<span lang=EN-US>168</span>个流量值。图中展示了在流量基线值学习成功之后一周内不同时间段的流量基线值情况。</p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588591"></a><a name="_Toc434585579"></a><a
+name="_Toc434571065"><span lang=EN-US>3.6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>日志</span></a></p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588592"></a><a name="_Toc434585580"></a><a
+name="_Toc434571066"><span lang=EN-US>3.6.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>系统日志</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>系统日志记录了<span
+lang=EN-US>Anti-DDoS</span>应用软件系统的运行日志，要查看系统日志请选择左侧 “日志<span lang=EN-US>”-&gt;</span>“系统日志<span
+lang=EN-US>”</span>，进入系统日志查看页面，如图 <span lang=EN-US>3</span><span lang=EN-US>&#8209;34</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=543 height=209 id="图片 470"
+src="user-guide.files/image040.jpg" alt=系统日志></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref406516436"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>34</span><span lang=EN-US> </span><span style='font-family:黑体'>系统日志界面</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>查询系统日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要在系统日志中查询日志中包含某些关键字的日志时，在查询输入框中输入需要查询的关键字，然后选择日志的类型（<span
+lang=EN-US>ERROR</span>、<span lang=EN-US>INFO</span>、<span lang=EN-US>DEBUG</span>）前对应的复选框即可，然后点击“<span
+lang=EN-US>GO”</span>按钮，在系统日志页面中将呈现查询的结果，如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;35</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=551 height=219 id="图片 468" src="user-guide.files/image041.jpg"
+alt=查询系统日志></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref433876782"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>35</span><span lang=EN-US> </span><span style='font-family:黑体'>查询系统日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>因为系统日志较多，如果想要查看后面的日志信息，那么可以通过页面下方的页数按钮，或者在输入框中输入第几页日志信息对应的数字后然后点击“<span
+lang=EN-US>GO</span>”按钮即可显示对应的日志信息。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要删除某条或者某几条系统日志信息，只需选中需要删除的日志信息前的复选框，然后点击页面上方的“删除”按钮。在删除前会弹出一个确认对话框，如果选择“<span
+lang=EN-US>OK</span>”那么将删除数据库中选中的系统日志信息，然后返回到系统日志显示页面；如果选择“<span lang=EN-US>Cancel”
+</span>那么将直接返回到系统日志显示页面。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>此外，也可以通过每一条日志末端的删除功能键删除想要删除的日志信息。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.1.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>清空日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要清空所有的系统日志，可以通过页面上方的“清空日志”按钮来删除所有的系统日志信息。在删除前会弹出一个确认对话框，如果选择“<span
+lang=EN-US>OK</span>”那么将删除数据库中所有的系统日志信息，然后返回到系统日志显示页面；如果选择“<span lang=EN-US>Cancel”
+</span>那么将直接返回到系统日志显示页面。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.1.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>下载日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要下载系统日志信息，可通过系统日志显示页面上方的<span
+lang=EN-US>“</span>下载日志<span lang=EN-US>”</span>按钮将所有的系统日志下载到本地进行查看。</p>
+
+<p class=3 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:0cm'><a name="_Toc434588593"></a><a name="_Toc434585581"></a><a
+name="_Toc434571067"><span lang=EN-US>3.6.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>操作日志</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>操作日志记录了当前用户通过天盾<span
+lang=EN-US>Anti-DDoS</span>系统进行的所有的操作记录，要查看操作日志选择页面左侧“日志<span lang=EN-US>”-&gt;</span>“操作日志<span
+lang=EN-US>”</span>，进入操作日志查看页面，如图 <span lang=EN-US>3</span><span lang=EN-US>&#8209;36</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;line-height:normal;page-break-after:avoid'><span lang=EN-US
+style='font-family:宋体'><img border=0 width=538 height=211 id="图片 462"
+src="user-guide.files/image042.jpg" alt=操作日志></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref405968236"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>36</span><span lang=EN-US> </span><span style='font-family:黑体'>操作日志界面</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>查询日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要在操作日志中查询日志中包含某些关键字的日志时，在查询输入框中输入需要查询的关键字，然后选择日志的类型（<span
+lang=EN-US>ERROR</span>、<span lang=EN-US>INFO</span>、<span lang=EN-US>DEBUG</span>）前对应的复选框即可，然后点击“<span
+lang=EN-US>GO</span>”按钮，在操作日志页面中将呈现查询的结果。如图
+<span lang=EN-US>3</span><span lang=EN-US>&#8209;37</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=530 height=206 id="图片 459" src="user-guide.files/image043.jpg"
+alt=查询操作日志></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434479898"><span style='font-family:黑体'>图</span>
+</a><span lang=EN-US>3</span><span lang=EN-US>&#8209;</span><span
+lang=EN-US>37</span><span lang=EN-US> </span><span style='font-family:黑体'>查询操作日志</span></p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>删除日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果要删除某条或者某几条日志信息，只需选中需要删除的日志信息前的复选框，然后点击主页上方的“删除”按钮。在删除前会弹出一个确认对话框，如果选择“<span
+lang=EN-US>OK</span>”那么将删除数据库中所有的操作日志信息，然后返回到操作日志显示页面；如果选择“<span lang=EN-US>Cancel”
+</span>那么将直接返回到操作日志显示页面。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>此外，也可以通过每一条日志末端的删除功能键删除日志信息。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>清空日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要清空操作日志，可以通过页面上方的“清空日志”按钮来删除所有的操作日志信息。在删除前会弹出一个确认对话框，如果选择“<span
+lang=EN-US>OK</span>”那么将删除数据库中所有的操作日志信息，然后返回到操作日志显示页面；如果选择“<span lang=EN-US>Cancel”
+</span>那么将直接返回到操作日志显示页面。</p>
+
+<p class=40 style='margin-left:0cm'><span lang=EN-US>3.6.2.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:幼圆'>下载日志</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果想要下载操作日志信息，可通过操作日志显示页面上方的<span
+lang=EN-US>“</span>下载日志<span lang=EN-US>”</span>按钮将所有的操作日志下载到本地进行查看。</p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588594"></a><a name="_Toc434585582"></a><a
+name="_Toc434571068"><span lang=EN-US>3.7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>中英文切换</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>我们为用户准备了中文和英语两种不同语言的<span
+lang=EN-US>web</span>管理页面。如果用户使用的语言非中文时候，用户在登录天盾<span lang=EN-US>Anti-DDoS</span>系统之后需要点击页面右上角的“中文<span
+lang=EN-US>”</span>菜单然后在出现的菜单项中选择“<span lang=EN-US>English”</span>进行中英文界面的切换，以便给用户呈现更好的管理界面。如图<span lang=EN-US> 3&#8209;38</span>所示：</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=469 height=192 id="图片 3" src="user-guide.files/image044.jpg"></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434501452"><span style='font-family:黑体'>图</span>
+<span lang=EN-US>3&#8209;</span></a><span
+lang=EN-US>38</span><span lang=EN-US> </span><span style='font-family:黑体'>中英文切换</span></p>
+
+<p class=2 style='margin-top:7.8pt;margin-right:0cm;margin-bottom:7.8pt;
+margin-left:28.9pt'><a name="_Toc434588595"></a><a name="_Toc434585583"></a><a
+name="_Toc434571069"><span lang=EN-US>3.8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:幼圆'>帮助</span></a></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'>如果用户想要获得关于天盾<span
+lang=EN-US>Anti-DDoS</span>系统的帮助信息，在用户登录系统之后点击右上角的“帮助<span lang=EN-US>”</span>菜单，然后在出现的页面中将提供关于天盾<span
+lang=EN-US>Anti-DDoS</span>系统的一些帮助信息，如图 <span lang=EN-US>3</span><span
+lang=EN-US>&#8209;39</span>所示。</p>
+
+<p class=MsoNormal align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt;page-break-after:avoid'><span lang=EN-US><img border=0
+width=336 height=56 id="图片 4" src="user-guide.files/image045.jpg"></span></p>
+
+<p class=MsoCaption align=center style='margin-left:0cm;text-align:center;
+text-indent:21.0pt'><a name="_Ref434501686"><span style='font-family:黑体'>图</span>
+<span lang=EN-US>3&#8209;</span></a><span
+lang=EN-US>39</span><span lang=EN-US> </span><span style='font-family:黑体'>帮助</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoTitle style='margin-left:21.0pt'><a name="_Toc434588596"></a><a
+name="_Toc434585584"></a><a name="_Toc434571070"><span lang=EN-US>APPENDIX1 </span></a><span
+style='font-family:宋体'>专业术语表</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><b><span lang=EN-US>D</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>DDoS</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>DDoS</span>：分布式拒绝<span
+lang=EN-US><a href="http://baike.baidu.com/view/133203.htm" target="_blank"><span
+lang=EN-US style='color:windowtext;text-decoration:none'><span lang=EN-US>服务</span></span></a>(DDOS:
+Distributed Denial of Service)</span>攻击指借助于客户<span lang=EN-US>/</span>服务器技术，将多个计算机联合起来作为攻击平台，对一个或多个目标发动<span
+lang=EN-US>DDOS</span>攻击，从而成倍地提高拒绝服务攻击的威力。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>N</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>Netnode</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>网络节点，即网络中的交换机或者类似于交换机的网络设备。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>O</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>ODL</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>ODL</span>全称是<span
+lang=EN-US>OpenDaylight&nbsp;</span>。<span lang=EN-US>Opendaylight</span>是<span
+lang=EN-US> Linux </span>基金会的一个合作项目。<span lang=EN-US>OpenDaylight</span>开源项目的架构主要包括：与<span
+lang=EN-US>SDN</span>基础设施层对应的数据平面网元（例如虚拟<span lang=EN-US><a
+href="http://www.2cto.com/net/switch/" target="_blank"><span lang=EN-US
+style='color:windowtext;text-decoration:none'><span lang=EN-US>交换机</span></span></a></span>、物理设备等），以及相应的南向接口（例如<span
+lang=EN-US>OpenFlow</span>等标准协议及一些厂商专有的接口）；与<span lang=EN-US>SDN</span>控制层对应的控制平台层及相应的基于<span
+lang=EN-US>REST</span>的<span lang=EN-US>OpenDaylight API</span>北向接口；与<span
+lang=EN-US>SDN</span>应用层对应的网络应用、编排和服务层。<span lang=EN-US>OpenDaylight</span>开源项目的主要内容包括<span
+lang=EN-US>SDN</span>控制器开发、南北向接口<span lang=EN-US>API</span>的扩展、用于多个控制器关联的东西向协议实现等。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>OpenFlow</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>OpenFlow </span>是一个开放的，基于一定标准的南向协议。<span
+lang=EN-US>OpenFlow</span>起源于<span lang=EN-US>2008</span>年斯坦福大学，目前已成为主流<span
+lang=EN-US>SDN</span>南向接口协议。它定义了如何由一个中心部件（控制器）对控制平面进行配置和控制。通过使用 <span
+lang=EN-US>OpenFlow</span>，控制器可以管理数据包在网络中的传输。<span lang=EN-US>OpenFlow </span>最主要的组件是：
+<span lang=EN-US>OpenFlow </span>控制器， <span lang=EN-US>OpenFlow </span>交换机， <span
+lang=EN-US>OpenFlow </span>协议。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>P</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>PO</span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>PO</span>全称是<span
+lang=EN-US>Protect Object</span>，即保护对象。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>PN</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>PN</span>全称是<span
+lang=EN-US>Protect Network</span>，即保护网络。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><b><span
+lang=EN-US>S</span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>SDN</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>SDN</span>全称是<span
+lang=EN-US>Software Defined Network</span>，即软件定义网络，是由美国斯坦福大学<span lang=EN-US>clean
+slate</span>研究组提出的一种新型网络创新架构，其核心技术<span lang=EN-US>OpenFlow</span>通过将网络设备控制面与数据面分离开来，从而实现了网络流量的灵活控制，为核心网络及应用的创新提供了良好的平台。<span
+lang=EN-US>SDN</span>本质上具有“控制和转发分离”、“设备资源虚拟化”和“通用硬件及软件可编程”三大特性。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoTitle style='margin-left:21.0pt'><a name="_Toc434588597"></a><a
+name="_Toc434585585"></a><a name="_Toc434571071"><span lang=EN-US>APPENDIX2 </span></a><span
+style='font-family:宋体'>常见问题解答</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q: </span><span style='color:red'>天盾<span lang=EN-US>Anti-DDoS</span>系统<span
+lang=EN-US>Web</span>管理对浏览器的要求？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A:
+</span>建议用户使用<span lang=EN-US>Internet Explorer 9.0</span>及以上版本、<span
+lang=EN-US>Google Chrome</span>、<span lang=EN-US>Firefox</span>浏览器。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q: </span><span style='color:red'>天盾<span lang=EN-US>Anti-DDoS</span>系统<span
+lang=EN-US>Web</span>管理默认的管理员用户名和密码是什么？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：天盾<span
+lang=EN-US>Anti-DDoS</span>系统<span lang=EN-US>web</span>管理提供了一个默认的超级管理员帐号，其默认的用户名和密码都是：<span
+lang=EN-US>admin</span>。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q</span><span style='color:red'>：为什么我不能登录<span lang=EN-US>Web</span>管理界面？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：请确认是否存在以下几个问题：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认网络通讯正常； </p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认浏览器为<span
+lang=EN-US>Internet Explorer 9.0</span>及以上版本、<span lang=EN-US>Google Chrome</span>、<span
+lang=EN-US>Firefox</span>等浏览器； </p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认设备是否开启了<span
+lang=EN-US>Tomcat</span>功能；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认用户名和密码是否正确；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>采用<span lang=EN-US>
+https://[</span>运行天盾<span lang=EN-US>Anti-DDoS</span>系统的<span lang=EN-US>IP </span>地址<span
+lang=EN-US>]</span>进行访问；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q</span><span style='color:red'>：为什么登陆到<span lang=EN-US>Web</span>管理界面之后不能进行系统配置？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：请确认当前用户是否具有管理员权限，如果当前用户只有用户权限，那么将不能进行系统配置，请更换管理员账号后重新登陆。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q</span><span style='color:red'>：如果不小心删除了系统配置，如何恢复？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：如果用户有系统配置备份文件，那么通过系统中的备份与恢复菜单项，然后浏览本地备份文件，然后点击上传后即可恢复到备份时的系统配置。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q</span><span style='color:red'>：为什么安装天盾<span lang=EN-US>Anti-DDoS</span>系统失败？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：请确认是否存在以下几个问题：</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认使用的安装包是否与当前系统匹配；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt;line-height:150%;
+layout-grid-mode:both'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>确认当前系统的版本号是否满足安装天盾<span
+lang=EN-US>Anti-DDoS</span>系统所需要的最低版本号；</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US
+style='color:red'>Q</span><span style='color:red'>：为什么根据提示安装<span lang=EN-US>Docker</span>容器失败？</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>A</span>：如果使用的是在线安装<span
+lang=EN-US>Docker</span>，请确认网络是否畅通，如果不能访问<span lang=EN-US>Internet</span>，那么请手动下载安装<span
+lang=EN-US>Docker 1.8</span>及以上版本。</p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

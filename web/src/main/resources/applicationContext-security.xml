@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+			http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+
+   <security:global-method-security pre-post-annotations="enabled" >
+		<security:expression-handler ref="expressionHandler"/>
+
+
+	</security:global-method-security>
+
+    <!--
+		SPRING SECURITY SETUP
+	-->
+
+  <security:http pattern="/css/**" security="none" />
+  <security:http pattern="/img/**" security="none" />
+  <security:http pattern="/js/**" security="none" />
+  <security:http pattern="/tpl/**" security="none" />
+
+    <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <constructor-arg value="256"/>
+    </bean>
+
+    <security:authentication-manager id="authenticationManager">
+        <security:authentication-provider user-service-ref="userService">
+            <security:password-encoder ref="passwordEncoder"></security:password-encoder>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <security:http
+            realm="Protected API"
+            use-expressions="true"
+            auto-config="false"
+            create-session="stateless"
+            entry-point-ref="unauthorizedEntryPoint"
+            authentication-manager-ref="authenticationManager">
+        <security:custom-filter ref="authenticationTokenProcessingFilter" position="FORM_LOGIN_FILTER" />
+		<security:intercept-url pattern="/rest/users/authenticate" access="permitAll" />
+        <security:intercept-url pattern="/rest/sys/upload" access="permitAll" />
+		<security:intercept-url pattern="/rest/users/**" access="hasRole('TENANT')" />
+
+        <!-- <security:intercept-url pattern="/rest/baseValueDisplay/**" access="hasRole('USER')" />  -->
+        <security:intercept-url pattern="/rest/overView/**" access="hasRole('USER')" />
+        <security:intercept-url pattern="/rest/policy/**" access="hasRole('TENANT')" />
+        <security:intercept-url pattern="/rest/sys/**" access="hasRole('ADMIN')" />
+        <security:intercept-url pattern="/rest/files/**" access="hasRole('ADMIN')" />
+        <security:intercept-url pattern="/rest/attackAnalyse" access="permitAll" />
+
+        <security:logout logout-success-url="/logout" />
+    </security:http>
+
+    <bean id="unauthorizedEntryPoint" class="com.cetc.backend.rest.security.UnauthorizedEntryPoint" />
+
+    <bean class="com.cetc.backend.rest.security.AuthenticationTokenProcessingFilter" id="authenticationTokenProcessingFilter">
+        <constructor-arg ref="userService" />
+    </bean>
+
+	<bean id="expressionHandler" class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+		<property name="permissionEvaluator">
+			<bean class="com.cetc.backend.rest.security.CustomPermissionEvaluator"/>
+		</property>
+	</bean>
+</beans>

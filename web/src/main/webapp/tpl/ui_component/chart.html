@@ -1,0 +1,68 @@
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="ibox">
+            <div class="ibox-title">
+
+                <div class="ibox-tools"></div>
+            </div>
+            <div class="ibox-content">
+                <div data-iu-chart="lineOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <div class="ibox-tools"></div>
+            </div>
+            <div class="ibox-content">
+                <div data-iu-chart="barOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="ibox">
+            <div class="ibox-title">
+
+                <div class="ibox-tools"></div>
+            </div>
+            <div class="ibox-content">
+                <div data-iu-chart="pieOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <div class="ibox-tools"></div>
+            </div>
+            <div class="ibox-content">
+                <div data-iu-chart="mapOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //$(function(){
+    function initPage() {
+        var wHeight = $(window).height();
+        var cHeight =( wHeight-170)/2;
+        if(cHeight > 0) {
+            $(".iuChart").height(cHeight);
+        }
+    }
+
+    initPage();
+    $(window).resize(function () {
+        initPage()
+    });
+    //});
+</script>
+

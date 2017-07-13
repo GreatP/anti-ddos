@@ -1,0 +1,133 @@
+
+<link rel="stylesheet" href="css/jquery.pagination.css" type="text/css" />
+<div class="col" ng-controller="poController">
+
+ <!--  
+    <div class="row m-b m-l m-t" >
+        <div class="col-lg-3" style="margin-left:0">
+            <p class="input-group form_datetime">
+                <input type="text" class="form-control" id="datePicker" placeholder="choose start date"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default time"><i class="glyphicon glyphicon-time"></i></button>
+                    </span>
+            </p>
+        </div>
+        <div class="col-lg-3" style="margin-left:0">
+            <p class="input-group form_datetime">
+                <input type="text" class="form-control" id="datePicker2" placeholder="choose end date"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default time"><i class="glyphicon glyphicon-time"></i></button>
+                    </span>
+            </p>
+        </div>
+
+    </div>
+  -->
+<!--
+    <div class="row  m-b m-l m-t">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="12">
+                    <p class="input-group">
+                        <input ng-model="query" class="form-control"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+
+                    </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <div ng-show="hasRole('ADMIN')"  class="container-fluid">
+        <div class="row row-fluid m-b m-l m-t">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <button type="button" class="btn-common btn-common-blue btn-common-medium"   ng-click="add()" translate="commonword.ADD">添加</button>
+                <button type="button" class="btn-common btn-common-red btn-common-medium" ng-click="batchDel()"  translate="commonword.DELETE"> 删除</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <div class="row m-l m-r">
+    Search: <input ng-model="query">
+    </div>
+    -->
+
+    <div class="row m-l m-r">
+        <div class="panel panel-default">
+           <div>
+                <table class="table table-hover " >
+                    <thead>
+                    <tr>
+                   	    <th ng-show="hasRole('ADMIN')" width="20px"><input type="checkbox" ng-click="toggleCheckAll()" ng-model="chkAll" /></th>
+                        <th translate="po.NAME">名称</th>
+                        <!--<th translate="po.INPUT_PORT">输入端口</th>-->
+                        <!--<th translate="po.OUTPUT_PORT">输出端口</th>-->
+
+                        <th translate="po.PROTECT_NETWORK">保护网络</th>
+                        <th translate="po.SHOW_TENANT">所属租户</th>
+
+                        <!--<th translate="po.DEFENSE_TYPE">防御类型</th>-->
+                        <!--<th translate="po.GUIDE_PORT">引流端口</th>-->
+                        <!--<th translate="po.PROTOCOL">协议</th>-->
+                        <!--<th translate="po.CONNECT_SWITCH">所属交换机</th>-->
+                        <th translate="po.CONNECT_CLEANDEV">所属清洗设备</th>
+                        <th translate="po.CLEANDEV_INPORT">输入端口</th>
+                        <th translate="po.CLEANDEV_OUTPORT">输出端口</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-show="userTableLength>0">
+                    <tr   ng-repeat="obj in userTableJson | filter:query">
+                        <td ng-show="hasRole('ADMIN')" width="20px"><input type="checkbox" ng-click="toggleCheck(obj.id)" ng-model="obj.checked" /></td>
+                        <td>{{obj.name}}</td>
+                        <!--<td>{{obj.inport}}</td>-->
+                        <!--<td>{{obj.outport}}</td>-->
+                        <td>{{obj.network}}</td>
+                        <td>{{obj.username}}</td>
+                        <!--<td>{{obj.defenseType}}</td>-->
+                        <!--<td>{{obj.guidePort}}</td>-->
+                        <!--<td>{{obj.protocol}}</td>-->
+                        <td>{{obj.cleandevIp}}</td>
+                        <td>{{obj.cleanInport}}</td>
+                        <td>{{obj.cleanOutport}}</td>
+                        <!--<td>{{obj.netnode_name}}</td>-->
+                        <td>
+                            <a href title='edit' ng-click="edit(obj.id)"><i class='glyphicon glyphicon-edit'></i></a>
+                            <a ng-show="hasRole('ADMIN')" href title='delete' ng-click="del(obj.id)"><i class='glyphicon glyphicon-trash'></i></a>
+                            <!--
+                            <button type="button" class="btn btn-default" ng-click="edit({{obj.id}})"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button type="button" class="btn btn-default" ng-click="del({{obj.id}})"><i class="glyphicon glyphicon-trash"></i></button>
+                            -->
+                        </td>
+
+                        <!--
+                            <td><a ui-sref="app.userEvaluate({'telNumber':{{obj._source.number}}})">{{obj._source.number}}</a></td>
+                        <td>{{roleArr[obj._source.role]}}</td>
+                        <td>{{obj._source.callingCount}}</td>
+                        <td>{{obj._source.calledCount}}</td>
+                        <td>{{obj._source.avgElapsed}}</td>
+                        <td>{{obj._source.location.province}}</td>
+                        <td>{{obj._source.location.city}}</td>
+
+                        -->
+                    </tr>
+                   </tbody>
+
+                </table>
+                <div class="text-center">
+                    <p ng-show="tableloading" translate="commonword.LOADING">加载中</p>
+                    <p ng-show="!userTableLength>0 && !tableloading && !getErrShow" translate="commonword.NODATA">暂无数据</p>
+                    <p class="text-danger" ng-show="getErrShow" translate="commonword.GET_FAIL">获取PO配置失败</p>
+                </div>
+
+            </div>
+            
+            <div id="page" class="pull-right m-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,6 @@
+target
+.idea
+*.iml
+antiDefense/dependency-reduced-pom.xml
+/bin
+web/src/main/java/com/cetc/backend/controller/WelcomeApplet.java

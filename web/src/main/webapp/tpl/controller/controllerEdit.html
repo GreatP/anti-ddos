@@ -1,0 +1,161 @@
+<div  class="container-fluid">
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3">
+        </div>
+        <div class="text-danger">
+            <div ng-show="saveErrShow" translate="controller.SAVE_FAIL">保存控制器配置失败</div>
+            <div ng-show="getErrShow" translate="controller.GET_FAIL">获取控制器配置失败</div>
+        </div>
+    </div>
+    <!--<div class="row row-fluid m-b m-l m-t">-->
+        <!--<div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs" translate="controller.TYPE">-->
+            <!--控制器类型：-->
+        <!--</div>-->
+        <!--<div class="col-lg-2 col-md-3 col-sm-3">-->
+            <!--<select id="controllerType" ng-model="formData.type" class="form-control">-->
+                <!--<option  ng-repeat="obj in controller" value={{obj.type}}>{{obj.name}}</option>-->
+            <!--</select>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="controller.HOST">控制器地址：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" name="ip" id="ip" maxlength="128" ng-model="formData.ip" class="form-control" ng-blur = "blurCheckIp()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnAddrShow" translate="controller.ADDR_EMPTY">地址不能为空</div>
+            <div ng-show="warnSameShow" translate="controller.EXISTED">该检测设备已存在</div>
+        </div>
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="controller.PORT">端口：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" name="port" id="port" maxlength="5" ng-model="formData.port" class="form-control" ng-blur="blurCheckPort()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnPortNullShow" translate="controller.PORT_EMPTY">端口不能为空</div>
+            <div ng-show="warnPortRangeShow" translate="controller.PORT_RANGE">端口范围必须在1-65535之间</div>
+        </div>
+    </div>
+
+    <!----------------add input port and output port------------------>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="po.INPUT_PORT">外网接口：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="inport" name="inport" maxlength="64" ng-model="formData.inport" class="form-control" ng-blur = "blurCheckInputport()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+            <div ng-show="warnInputportShow" translate="po.INPUT_PORT_EMPTY">外网接口不能为空</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3  m-t-xs">
+            <span translate="po.OUTPUT_PORT">内网接口：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" id="outport" name="outport" maxlength="64" ng-model="formData.outport" class="form-control" ng-blur = "blurCheckOutputport()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs  text-danger">
+            <div ng-show="warnOutputportShow" translate="po.OUTPUT_PORT_EMPTY">内网接口不能为空</div>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------->
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="controller.USER">用户名：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="text" name="user" id="user" maxlength="64" ng-model="formData.user" class="form-control" ng-blur="blurCheckUser()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnUserShow" translate="controller.USER_EMPTY">用户名不能为空</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="controller.PASSWORD">密码：</span><span class="text-danger">*</span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3">
+            <input type="password" name="password" id="password" maxlength="64" ng-model="formData.password" class="form-control" ng-blur="blurCheckPassword()"/>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnPasswordShow" translate="controller.PASSWORD_EMPTY">密码不能为空</div>
+        </div>
+    </div>
+    <div ng-show="detectorShow">
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+                <span translate="controller.INTERVAL">检测时间间隔（秒）：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" name="interval" id="interval" maxlength="3" ng-model="formData.interval" class="form-control" ng-blur="blurCheckInterval()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+                <div ng-show="warnIntervalNullShow" translate="controller.TIME_INTERVAL_EMPTY">间隔时间不能为空</div>
+                <div ng-show="warnIntervalRangeShow" translate="controller.TIME_INTERVAL_RANGE">间隔时间必须在5-600之间</div>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+                <span translate="controller.EXCEPTION_COUNT">异常次数阀值：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" name="suspicionsThreshold" id="suspicionsThreshold" maxlength="3"  ng-model="formData.suspicionsThreshold" class="form-control" ng-blur="blurCheckSuspicionsThreshold()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+                <div ng-show="warnSuspicionsThresholdNullShow" translate="controller.EXCEPTION_COUNT_EMPTY">异常次数阀值不能为空</div>
+                <div ng-show="warnSuspicionsThresholdRangeShow" translate="controller.EXCEPTION_COUNT_RANGE">异常次数阀值必须在0-100之间</div>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+                <span translate="controller.EXCEPTION_PER">异常流量偏差百分比（%）：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" name="deviationPercentage" id="deviationPercentage" maxlength="4" ng-model="formData.deviationPercentage" class="form-control" ng-blur="blurCheckDeviationPercentage()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+                <div ng-show="warnDeviationPercentageNullShow" translate="controller.EXCEPTION_PER_EMPTY">异常流量偏差百分比不能为空</div>
+                <div ng-show="warnDeviationPercentageRangeShow" translate="controller.EXCEPTION_PER_RANGE">异常流量偏差百分比必须在0-1000之间</div>
+            </div>
+        </div>
+
+        <div class="row row-fluid m-b m-l m-t">
+            <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+                <span translate="controller.RECOVER_COUNT">攻击恢复次数阀值：</span><span class="text-danger">*</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+                <input type="text" name="recoverNormalThreshold" id="recoverNormalThreshold" maxlength="4" ng-model="formData.recoverNormalThreshold" class="form-control" ng-blur="blurCheckRecoverNormalThreshold()"/>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+                <div ng-show="warnRecoverNormalThresholdNullShow" translate="controller.RECOVER_COUNT_EMPTY">攻击恢复次数阀值不能为空</div>
+                <div ng-show="warnRecoverNormalThresholdRangeShow" translate="controller.RECOVER_COUNT_RANGE">攻击恢复次数阀值必须在0-100之间</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-3 col-md-6 col-sm-6">
+            <input type="hidden" name="id" value="{{id}}" />
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="save()"  translate="commonword.SAVE">保存</button>
+            <button type="button" class="btn-common btn-common-blue btn-common-small" ng-click="goBack()"  translate="commonword.BACK">返回</button>
+        </div>
+    </div>
+</div>
+
+

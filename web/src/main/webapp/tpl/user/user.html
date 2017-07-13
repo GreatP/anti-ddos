@@ -1,0 +1,56 @@
+
+<div class="col" ng-controller="userController">
+
+    <div class="row  m-b m-l m-t">
+        <div class="col-lg-6">
+            <button type="button" class="btn-common btn-common-blue btn-common-medium" ng-click="add()" translate="commonword.ADD">添加</button>
+            <button type="button" class="btn-common btn-common-red btn-common-medium" ng-click="batchDel()" translate="commonword.DELETE">删除</button>
+        </div>
+    </div>
+
+
+    <div class="row m-l m-r">
+        <div class="panel panel-default">
+           <div>
+                <table class="table table-hover " >
+                    <thead>
+                    <tr>
+                        <th width="20px"><input type="checkbox" ng-click="toggleCheckAll()" ng-model="chkAll" /></th>
+                        <th translate="usermanage.USERNAME">用户名</th>
+                        <th translate="usermanage.NICKNAME">昵称</th>
+                        <th translate="usermanage.CREATETIME">创建时间</th>
+                        <th translate="usermanage.ROLES">角色</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-show="userTableLength>0">
+                    <tr ng-repeat="obj in userTableJson">
+                        <td width="20px"><input type="checkbox" ng-click="toggleCheck(obj.id, obj.username)" ng-model="obj.checked" /></td>
+                        <td data-toggle="tooltip" title="{{obj.username}}">{{obj.username}}</td>
+                        <td data-toggle="tooltip" title="{{obj.nickName}}">{{obj.nickName}}</td>
+                        <td data-toggle="tooltip" title='{{ obj.createTime | date:"yyyy-MM-dd HH:mm:ss"}}'>{{ obj.createTime | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                        <td data-toggle="tooltip" title="{{obj.role}}">{{obj.role}}</td>
+                        <td>
+                            <a href title='edit' ng-click="edit(obj.id)"><i class='glyphicon glyphicon-edit'></i></a>
+                            <a href title='delete' ng-click="del(obj.id, obj.username)"><i class='glyphicon glyphicon-trash'></i></a>
+                            <!--
+                            <button type="button" class="btn btn-default" ng-click="edit({{obj.id}})"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button type="button" class="btn btn-default" ng-click="del({{obj.id}})"><i class="glyphicon glyphicon-trash"></i></button>
+                            -->
+                        </td>
+                    </tr>
+                   </tbody>
+
+                </table>
+                <div class="text-center">
+                    <p ng-show="tableloading" translate="commonword.LOADING">加载中</p>
+                    <p ng-show="!userTableLength>0 && !tableloading" translate="commonword.NODATA">暂无数据</p>
+                </div>
+
+            </div>
+            <div id="page" class="pull-right m-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+

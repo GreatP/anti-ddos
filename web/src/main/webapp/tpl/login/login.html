@@ -1,0 +1,134 @@
+<div class="loginbody" ng-init="app.settings.container = false;">
+
+	<div class="login-bg">
+		<!--主区域-->
+		<div class="main">
+			<!--LOGO-->
+			<div class="logo"></div>
+			<div class="content">
+				<!--营销区域-->
+				<div class="marketing">
+					<div class="gg">
+						<div class="gg-box">
+							<p class="call">售后服务：400-888-8888</p>
+							<div class="gg-photo">
+								<div class="float">
+									<!--ad_left-->
+									<div class="no1">
+										<div class="cards"></div>
+									</div>
+								</div>
+								<div class="float">
+									<!--ad_right_top-->
+									<div class="no2">
+										<p></p>
+										<div class="cards"></div>
+									</div>
+									<!--ad_right_bottom-->
+									<div class="no3">
+										<div class="cards"></div>
+										<p></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gg-bg"></div>
+				</div>
+				<!--登录区域-->
+				<div class="login">
+					<div class="m-l-none row">
+						<div class="col-lg-4 product-logo" data-toggle="tooltip"
+							title="产品Logo"></div>
+						<div class="col-lg-6 title">{{app.name}}</div>
+					</div>
+
+					<div class="login-box">
+						<form name="form" class="form form-horizontal form-validation">
+							<div class="form-group form-item">
+								<label for="username" class="control-label text-left">用户名</label>
+								<input type="username" placeholder="Username"
+									class="form-control" ng-model="user.username" required />
+							</div>
+							<div class="form-group form-item">
+								<label for="password" class="control-label text-left">密码</label>
+								<input type="password" placeholder="Password"
+									class="form-control" ng-model="user.password" required /> <span
+									class="shiftKey" style="display: none">大写锁定已经打开</span>
+							</div>
+
+							<div class="text-danger wrapper text-left" ng-show="authError">
+								{{authError}}</div>
+							<div class="form-group row m-t-lg w-full">
+								<div class="col-sm-offset-0 col-sm-4">
+									<div class="checkbox">
+										<label class="i-checks"> <input type="checkbox"
+											ng-model="rememberMe" checked ng-click="remember()"/> <i
+											class="glyphicon text-primary-dker"></i> 记住我
+										</label>
+									</div>
+								</div>
+								<div class="col-sm-offset-0 col-sm-8">
+									<button type="submit"
+										class="btn m-b-xs m-l-none w-sm btn-success"
+										ng-click="login()" ng-disabled='form.$invalid'>登录</button>
+								</div>
+							</div>
+						</form>
+
+						<!-- <ol class="link">
+            <li> <a href="../html/ca_root.crt">下载根证书</a> </li>
+            <li> <a href="JavaScript:onVer();">版本信息</a> </li>
+            <li> <a href="JavaScript:changeLogin();">使用简版登录页面</a> </li>
+          </ol>-->
+						<!--首次提示-->
+						<div class="first_tips" style="display: none;">
+							<span></span>
+							<p>
+								<strong>登录界面更新了！</strong>
+							</p>
+							<p>
+								点击这里切换回旧版风格，需要验证<br>超级管理员身份
+							</p>
+						</div>
+						<!---->
+					</div>
+				</div>
+			</div>
+			<div class="copyright " ng-include="'tpl/common/page_footer.html'"></div>
+		</div>
+	</div>
+	<!--窗口遮罩-->
+	<div class="win-mask" style="display: none"></div>
+	<!--弹出窗口-->
+	<div class="win" style="display: none">
+		<div class="win-box">
+			<div class="win-title">身份认证</div>
+			<div class="win-content">
+				<p>切换旧版登录界面，需要验证超级管理员帐号。</p>
+				<dl>
+					<dt>用户名：</dt>
+					<dd>
+						<input name="changeUserName" id="changeUserName" type="text">
+					</dd>
+				</dl>
+				<dl>
+					<dt>密码：</dt>
+					<dd>
+						<input name="changePwd" id="changePwd" type="password">
+					</dd>
+				</dl>
+			</div>
+			<!--提示与反馈信息-->
+			<p class="changeMessage">
+				<label id="changeErr_info"></label>
+			</p>
+			<div class="win-bottom">
+				<a href="#" id='loginEnter' class="btn">确定</a> <a href="#"
+					id="loginCancle" class="btn">取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <script src="js/login/login-ui-main.js"></script>

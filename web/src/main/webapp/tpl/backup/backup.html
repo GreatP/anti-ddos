@@ -1,0 +1,87 @@
+
+<div>
+    <div class="row row-fluid m-b m-l m-t" >
+        <div  class="col-lg-2 col-md-3 col-sm-3">
+        </div>
+        <div class="text-danger">
+            <div ng-show="getErrShow" translate="backup.GET_FAIL">获取配置信息失败</div>
+        </div>
+    </div>
+
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="backup.BACKUPDB">备份:</span>
+        </div>
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <input type="hidden" name="id" value="{{id}}" />
+            <a href="javascript:void(0);" id="backup" class="btn btn-common-blue"  ng-click="backUp()" rel="nofollow" title="Download the db-backup file"><span translate="backup.BACKUPANDDOWNLOAD">下载配置</span></a>
+            <!--<button type="button" class="btn btn-danger" ng-click="goBack()">返回</button>-->
+        </div>
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnBackupFailShow" translate="backup.BACKUPFAIL">备份配置信息失败！</div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-success">
+            <div ng-show="BackupSuccessShow" translate="backup.BACKUPSUCCESS">备份配置信息成功!</div>
+        </div>
+    </div>
+</div>
+
+<div class="line dk show bg-primary" color="red"></div>
+
+<div>
+    <div class="row row-fluid m-b m-l m-t">
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div  class="col-lg-2 col-md-3 col-sm-3 m-t-xs">
+            <span translate="backup.SELECTBACKUPFILE">恢复：</span>
+        </div>
+        <div>
+            <form method="post" enctype="multipart/form-data">
+                <div class="fileupload-buttonbar">
+                    <label class="btn btn-common-blue fileinput-button"
+                           ng-class="{disabled: disabled}"> <span translate="backup.SELECTFILE">Upload</span> <input
+                            type="file" name="file" data-url="rest/sys/upload" upload
+                            ng-disabled="disabled">
+                    </label>
+                    <button type="button" class="btn btn-common-blue start"
+                            data-ng-click="upload()">
+                        <i class="glyphicon glyphicon-upload"></i> <span translate="backup.UPLOADRESTORE">恢复</span>
+                    </button>
+                    <!--<button type="button" class="btn btn-warning cancel"-->
+                            <!--data-ng-click="cancel()">-->
+                        <!--<i class="glyphicon glyphicon-ban-circle"></i> <span>Cancel-->
+					<!--upload</span>-->
+                    <!--</button>-->
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- <span ng-show="!files.length">No files selected</span> -->
+                        <ul>
+                            <li ng-repeat="file in files">{{file}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="progress progress-striped active" ng-show="percentage">
+                            <div class="progress-bar progress-bar-success"
+                                 style="width: {{percentage}}%"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row row-fluid m-b m-l m-t">
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-danger">
+            <div ng-show="warnRestoreFailShow" translate="backup.RESTOREFAIL">恢复配置信息失败！</div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 m-t-xs text-success">
+            <div ng-show="RestoreSuccessShow" translate="backup.RESTORESUCCESS">恢复配置信息成功!</div>
+        </div>
+    </div>
+</div>

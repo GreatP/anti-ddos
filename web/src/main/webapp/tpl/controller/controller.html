@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/jquery.pagination.css" type="text/css" />
+<div class="col" ng-controller="conController">
+    <div  class="container-fluid">
+        <div class="row row-fluid m-b m-l m-t">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <button type="button" class="btn-common btn-common-blue btn-common-medium"   ng-click="add()" translate="commonword.ADD">添加</button>
+                <button type="button" class="btn-common btn-common-red btn-common-medium" ng-click="batchDel()"  translate="commonword.DELETE"> 删除</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row m-l m-r">
+        <div class="panel panel-default">
+            <div>
+                <table class="table table-hover " >
+                    <thead>
+                    <tr>
+                        <th width="20px"><input type="checkbox" ng-click="toggleCheckAll()" ng-model="chkAll" /></th>
+                        <!--<th translate="controller.TYPE">控制器类型</th>-->
+                        <th translate="controller.HOST">地址</th>
+                        <th translate="controller.PORT">端口</th>
+                        <th translate="controller.USER">用户名</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody ng-show="controllerTableLength>0">
+                    <tr ng-repeat="obj in controllerTableJson">
+                        <td><input type="checkbox" ng-click="toggleCheck(obj.id)" ng-model="obj.checked" /></td>
+                        <!--<td>{{controller[obj.type]}}</td>-->
+                        <td>{{obj.ip}}</td>
+                        <td>{{obj.port}}</td>
+                        <td>{{obj.user}}</td>
+                        <td>
+                            <a href title='edit' ng-click="edit(obj.id)"><i class='glyphicon glyphicon-edit'></i></a>
+                            <a href title='delete' ng-click="del(obj.id)"><i class='glyphicon glyphicon-trash'></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+                <div class="text-center">
+                    <p ng-show="tableloading" translate="commonword.LOADING">加载中</p>
+                    <p ng-show="!controllerTableLength>0 && !tableloading && !getErrShow" translate="commonword.NODATA">暂无数据</p>
+                    <p class="text-danger" ng-show="getErrShow" translate="commonword.GET_FAIL">获取控制器配置失败</p>
+                </div>
+
+            </div>
+            <div id="page" class="pull-right m-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+

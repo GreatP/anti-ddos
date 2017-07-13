@@ -1,0 +1,109 @@
+
+
+<div class="container-fluid">
+    <div class="row-fluid m-l-md m-b-md">
+        <form>
+            <br>
+            <!--<span class="col-lg-2 btn btn-info">请选择</span>-->
+
+            <!-- POData值在flowDisplay.js中设置-->
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <select id="selectPo" ng-change="setProtocal(po)" class="form-control" ng-model="po">
+                    <option value="" translate="flowDisplay.SELECT_PO">---请选择保护对象---</option>
+                    <option ng-repeat="obj in POData" value={{obj}}>{{obj.name}}</option>
+                </select>
+            </div>
+            <!--<select ng-model="po" ng-change="setProtocal(po)" ng-options="obj.name for obj in POData" >-->
+            <!--&lt;!&ndash;<option value=-1>---请选择协议---</option>&ndash;&gt;-->
+
+            <!--</select>-->
+            <div class="col-lg-3 col-md-3 col-sm-3">
+
+                <select id="selectProtocal" class="form-control">
+                    <option value=-1 translate="flowDisplay.SELECT_PROTOCOL">---请选择协议---</option>
+                    <option ng-repeat="obj in protocal" value={{obj.value}}>{{obj.name}}</option>
+                </select>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <!--<button id="year" type="button"  ng-click="DrawEChart(5)">提交查询</button>-->
+                <button type="button" class="btn btn-info" ng-click="getDatas()" translate="flowDisplay.QUERY">提交查询</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br>
+
+<div class="row-fluid">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading font-bold" translate="flowDisplay.HOUR_CHART">一小时流量图</div>
+            <div class="panel-body ">
+                <div data-iu-chart="hourOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading font-bold" translate="flowDisplay.DAY_CHART">一天流量图</div>
+            <div class="panel-body ">
+                <div data-iu-chart="dayOption" class="iuChart"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+
+            <div class="panel-heading font-bold" translate="flowDisplay.WEEK_CHART">一周流量图</div>
+            <div class="panel-body">
+                <div data-iu-chart="weekOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row-fluid">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading font-bold" translate="flowDisplay.MONTH_CHART">月流量图</div>
+            <div class="panel-body ">
+                <div data-iu-chart="monthOption" class="iuChart"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+
+            <div class="panel-heading font-bold" translate="flowDisplay.YEAR_CHART">年流量图</div>
+            <div class="panel-body">
+                <div data-iu-chart="yearOption" class="iuChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //$(function(){
+    function initPage() {
+        var wHeight = $(window).height();
+        var cHeight =( wHeight-170)/2;
+        if(cHeight > 0) {
+            $(".iuChart").height(cHeight);
+        }
+    }
+
+    initPage();
+    $(window).resize(function () {
+        initPage()
+    });
+    //});
+</script>
+

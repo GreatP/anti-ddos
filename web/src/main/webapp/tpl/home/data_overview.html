@@ -1,0 +1,51 @@
+
+<div class="col" ng-controller="dataOverviewController" >
+    <div class="wrapper-md">
+
+        <div class="row-fluid">
+
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold" translate="dataOverView.FLOW_CONTRAST">流量对比</div>
+                    <div class="panel-body ">
+                        <div data-iu-chart="contrastOption" style="height:400px;"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading font-bold" translate="dataOverView.INPUT_FLOW_DISTRIBUTION">入流量分布</div>
+                    <div class="panel-body">
+                        <div data-iu-chart="inputFlowPieOption" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-fluid">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold" translate="dataOverView.PROTECT_OBJECT_FLOW_TOP10">防护对象流量Top 10</div>
+
+                    <div class="panel-body">
+                        <div data-iu-chart="poFlowOption" style="height:350px;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold" translate="dataOverView.IP_FLOW_TOP10">IP流量Top 10</div>
+
+                <div class="panel-body">
+                    <div data-iu-chart="ipFlowOption" style="height:350px;"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

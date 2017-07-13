@@ -1,0 +1,44 @@
+
+<div class="col">
+
+    <div class="row m-l m-r">
+        <div class="panel panel-default">
+           <div>
+                <table class="table table-hover" >
+                    <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>昵称</th>
+                        <th>角色</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-show="userTableLength>0">
+                    <tr ng-repeat="obj in userTableJson">
+                        <td data-toggle="tooltip" title="{{obj.username}}">{{obj.username}}</td>
+                        <td data-toggle="tooltip" title="{{obj.nickName}}">{{obj.nickName}}</td>
+                        <td data-toggle="tooltip" title="{{obj.role}}">{{obj.role}}</td>
+                        <td>
+                            <a href title='delete' ng-click="del({{obj.id}})"><i class='glyphicon glyphicon-trash'></i></a>
+                            <!--
+                            <button type="button" class="btn btn-default" ng-click="edit({{obj.id}})"><i class="glyphicon glyphicon-edit"></i></button>
+                            <button type="button" class="btn btn-default" ng-click="del({{obj.id}})"><i class="glyphicon glyphicon-trash"></i></button>
+                            -->
+                        </td>
+                    </tr>
+                   </tbody>
+
+                </table>
+                <div class="text-center">
+                    <p ng-show="tableloading">加载中</p>
+                    <p ng-show="!userTableLength>0 && !tableloading ">暂无数据</p>
+                </div>
+
+            </div>
+            <div id="page" class="pull-right m-pagination"></div>
+        </div>
+    </div>
+
+</div>
+
+
